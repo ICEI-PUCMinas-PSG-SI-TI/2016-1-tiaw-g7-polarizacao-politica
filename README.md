@@ -1,17 +1,21 @@
 # Informações do Projeto
-`TÍTULO DO PROJETO`  
+`Site Despolariza`  
 
 Trabalho Interdisciplinar - Aplicacões Web
 
-`CURSO`
+`Sistema de Informacao e Analise e Desenvolvimento de Sistema`
 
-`SEMESTRE`
+`1º SEMESTRE`
 
 ## Participantes
 
 Os membros do grupo são: 
-- Fulano da Silva
-- Ciclano Albuquerque
+- Karolina Carvalho Soares Martins
+- Guilherme Matheus Araujo
+- André Henrique Braga DIas
+- Rubens de Moura Arquina Oliveira
+- Marcelo Henrique Soares SIlva
+  
 
 > Inclua a lista dos membros da equipe com seus nomes completos.
 
