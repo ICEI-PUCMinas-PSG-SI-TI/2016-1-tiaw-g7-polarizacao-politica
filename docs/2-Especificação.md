@@ -18,12 +18,30 @@ Maria de Fátima (62 anos): Dona de casa comunicativa que compartilha notícias 
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+1. Eu na condição de eleitor, desejo obter informações a respeito dos dois lados políticos de uma notícia, para decidir meu voto de forma consciente.
 
-<img width="1571" height="651" alt="5a304506-8583-43c8-94e2-2e750e655b0f" src="https://github.com/user-attachments/assets/1a248a9f-c505-4309-939b-9d2e3eedc25d" />
+Contexto: A persona Márcio Ribeiro, que busca informações organizadas para formar suas próprias opiniões sem a imposição de pontos de vista agressivos.
 
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
+2. Eu na condição de estudante, quero debater temas polêmicos em sala de aula de forma estruturada, para desenvolver meu pensamento crítico.
+
+Contexto: Focar na utilização da plataforma como ferramenta educativa, incentivando o respeito e a análise de dados em discussões acadêmicas.
+
+3. Eu na condição de usuário de redes sociais, desejo acessar um verificador de fakes rápido e intuitivo, para melhorar meus argumentos e evitar conflitos com parentes.
+
+Contexto: Atende a usuários como Maria de Fátima, ajudando a validar informações antes do compartilhamento compulsivo no WhatsApp ou Facebook.
+
+4. Eu na condição de estagiário de advocacia, quero acessar um resumo neutro sobre temas de polarização política, para separar o que é lei do que é barulho de internet.
+
+Contexto: Ajuda a persona Alexandre Batista a controlar a impulsividade, oferecendo fatos e argumentos sólidos para embasar suas crenças.
+
+5. Eu na condição de usuário do site, desejo navegar de maneira simples e estruturada, para localizar informações de maneira eficiente.
+
+Contexto: Garante que o sistema seja funcional para quem consome notícias rapidamente pelo celular durante o dia.
+
+6. Eu na condição de eleitor, quero consultar o mapa de polarização para facilitar a comparação de diferentes opiniões, para promover o aprendizado sobre democracia e participação social.
+
+Contexto: Utiliza a funcionalidade de "Mapa da Polarização" para reduzir a confusão causada pelo excesso de informações desordenadas.
+
 
 ## Requisitos
 
@@ -33,34 +51,19 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001|O sistema deve disponibilizar um "Verificador de Fake News" para análise de links e notícias.| ALTA | 
+|RF-002|O sistema deve oferecer um Chatbot (Chat Despolarizar) para verificação de Fake News interação e esclarecimento de dúvidas dos usuários.| MÉDIA |
+|RF-003|A plataforma deve fornecer uma lista de referências e links úteis para aprofundamento acadêmico e técnico.| BAIXA |
 
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| O sistema deve ser responsivo, adaptando-se a dispositivos móveis e desktops.| ALTA | 
+|RNF-002| O tempo de carregamento das páginas e processamento de buscas não deve ultrapassar 3 segundos.|  MEDIA | 
+|RNF-003|A interface deve apresentar alto contraste e navegação intuitiva para facilitar o uso por diferentes faixas etárias.|  BAIXA | 
 
-> Com base nas Histórias de Usuário, enumere os requisitos da sua
-> solução. Classifique esses requisitos em dois grupos:
->
-> - [Requisitos Funcionais
->   (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
->   correspondem a uma funcionalidade que deve estar presente na
->   plataforma (ex: cadastro de usuário).
->
-> - [Requisitos Não Funcionais
->   (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
->   correspondem a uma característica técnica, seja de usabilidade,
->   desempenho, confiabilidade, segurança ou outro (ex: suporte a
->   dispositivos iOS e Android).
->
-> Lembre-se que cada requisito deve corresponder à uma e somente uma
-> característica alvo da sua solução. Além disso, certifique-se de que
-> todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
 
@@ -68,13 +71,6 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|01| O projeto deverá ser entregue obrigatoriamente até o final do semestre.|
+|02| NO sistema não deve utilizar bancos de dados externos.     |
 
-
-> Enumere as restrições à sua solução. Lembre-se de que as restrições
-> geralmente limitam a solução candidata.
-> 
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
