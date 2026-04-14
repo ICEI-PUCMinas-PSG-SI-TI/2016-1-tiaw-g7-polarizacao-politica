@@ -24,7 +24,8 @@
 
 ## Wireframes
 
-![Exemplo de Wireframe](images/wireframe-example.png)
+![WhatsApp Image 2026-04-14 at 20 32 10](https://github.com/user-attachments/assets/74dfad5b-47c4-489a-b321-7061c8458aff)
+
 
 > São protótipos usados em design de interface para sugerir a
 > estrutura de um site web e seu relacionamentos entre suas
