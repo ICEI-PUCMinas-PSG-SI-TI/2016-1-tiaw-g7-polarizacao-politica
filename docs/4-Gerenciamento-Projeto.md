@@ -7,16 +7,16 @@
 > Apresente a divisão de papéis entre os membros do grupo em cada sprint. O desejável é que, em cada sprint, o aluno assuma papéis diferentes na disciplina. Siga o modelo do exemplo abaixo:
 
 ### Sprint 1
-- _Scrum master_: AlunaX
-- Protótipos: AlunoY
-- Testes: AlunoK
-- Documentação: AlunaZ
+- _Scrum master_: Karolina Carvalho Soares Martins
+- Protótipos: André Henrique Braga Dias
+- Testes: Rubens de Moura Arquina Oliveira, Marcelo Henrique Soares SIlva
+- Documentação: Guilherme Matheus Araujo
 
 ### Sprint 2
-- _Scrum master_: AlunaY
-- Desenvolvedor _front-end_: AlunoX
-- Desenvolvedor _back-end_: AlunoK
-- Testes: AlunaZ
+- _Scrum master_:  Guilherme Matheus Araujo
+- Desenvolvedor _front-end_: Karolina Carvalho Soares Martins
+- Desenvolvedor _back-end_: André Henrique Braga Dias,  Rubens de Moura Arquina Oliveira
+- Testes: Marcelo Henrique Soares Silva
 
 ## Quadro de tarefas
 
@@ -24,13 +24,13 @@
 
 Atualizado em: 09/01/2005
 
-| Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
-| :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Home-Page        | 01/01/2005     | 07/01/2005 | ✔️    | 05/01/2005      |
-| AlunaZ        | CSS Unificado    | 03/01/2005     | 10/01/2005 | 📝    |                 |
-| AlunoY        | Página de login  | 01/01/2005     | 07/01/2005 | ⌛     |                 |
-| AlunoK        | Script de login  |                | 12/01/2005 | ❌    |       |
+| Responsável                       | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 
+| André Henrique Braga Dias        | Home-Page         |                |            | 📝    |                  |
+| Karolina Carvalho Soares Martins 
+| Guilherme Matheus Araujo         | CSS Unificado    |                 |            | 📝    |                  |
+| Rubens de Moura Arquina Oliveira | Página de login  |                 |            | 📝    |                  |
+|  Marcelo Henrique Soares Silva   | Script de login  |                 |            | 📝    |                  |
 Legenda:
 - ✔️: terminado
 - 📝: em execução
@@ -43,14 +43,10 @@ Legenda:
 
 As ferramentas empregadas no projeto são:
 
-- Editor de código.
-- Ferramentas de diagramação.
-- Frameworks 
-- Outras ferramentas externas
+- Editor de código. Visual Studio Code (VS Code).
+- Ferramentas de diagramação.Figma e Marvel 3.
+- Frameworks Bootstrap 5 (Iremos usar)
+- Outras ferramentas externas GitHub
 
-
-## Links Úteis
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
 
 
