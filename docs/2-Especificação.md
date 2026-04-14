@@ -52,7 +52,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
 |RF-001|O sistema deve disponibilizar um "Verificador de Fake News" para análise de links e notícias.| ALTA | 
-|RF-002|O sistema deve oferecer um Chatbot (Chat Despolarizar) para verificação de Fake News interação e esclarecimento de dúvidas dos usuários.| MÉDIA |
+|RF-002|O sistema deve oferecer um Chatbot (Chat Despolarizar) interação e esclarecimento de dúvidas dos usuários.| MÉDIA |
 |RF-003|A plataforma deve fornecer uma lista de referências e links úteis para aprofundamento acadêmico e técnico.| BAIXA |
 
 
