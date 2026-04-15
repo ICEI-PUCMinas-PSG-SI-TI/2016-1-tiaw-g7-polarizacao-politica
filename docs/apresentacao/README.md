@@ -2,6 +2,7 @@
 # Apresentação
 
 <span style="color:red">Pré-requisitos: Todos os demais artefatos</span>
+
 Slide 1 
 <img width="960" height="538" alt="Slide 1" src="https://github.com/user-attachments/assets/33b4ec74-4112-4fbc-a8d8-76c962a24fac" />
 
