@@ -16,6 +16,3 @@ Para solucionar o problema da polarização política e atender às necessidades
 ## Arquitetura da solução
 
 <img width="1617" height="1119" alt="User folw" src="https://github.com/user-attachments/assets/fb61b03a-1010-42a5-93bd-cbd68dd798e9" />
-
-
-![Exemplo de UserFlow](images/userflow.jpg)
