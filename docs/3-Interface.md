@@ -10,7 +10,23 @@
 
 ## User Flow
 
-![Exemplo de UserFlow](images/userflow.jpg)
+<img width="1617" height="1119" alt="image" src="https://github.com/user-attachments/assets/0eec43df-4663-4e83-b97a-0022983e9195" />
+
+
+1. Início — Notícias 
+Tela de entrada do app. Apresenta um artigo explicativo sobre polarização política e uma grade de notícias rápidas na parte inferior, funcionando como feed de conteúdo jornalístico.
+
+2. Aprofundamento — Descrição de Polarização
+Página de conteúdo editorial aprofundado, com texto longo explicando por que a polarização política é um problema, seguido de links externos para leitura complementar em fontes confiáveis.
+
+3. Fake News — Ferramenta de Prevenção 
+Ferramenta educativa com dicas para identificar notícias falsas, baseada em três critérios: Triagem de Temporalidade, Triangulação de Dados e Análise Semântica. Possui também um campo de input de texto onde o usuário pode colar uma notícia para análise.
+
+4. Chat — Interação com o Usuário 
+Interface de chatbot chamada "Chat Despolariza!", com campo de mensagem e botões de ação (Duvidas, Como, Argumentos). O usuário interage com uma IA para tirar dúvidas sobre polarização e fake news.
+
+5. Sobre — Descrição do Site 
+Página institucional explicando a missão do app, a tecnologia utilizada (IA neutra e sem viés ideológico) e os princípios que guiam a plataforma: multiperspectivismo, prioridade ao dado bruto e ausência de opinião.
 
 > Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor
 > mapear todo fluxo de telas do site ou app. Essa técnica funciona
