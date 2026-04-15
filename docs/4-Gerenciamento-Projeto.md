@@ -22,7 +22,7 @@
 
 > Apresente a divisão de tarefas entre os membros do grupo e o acompanhamento da execução, conforme exemplo abaixo.
 
-Atualizado em: 09/01/2005
+Atualizado em: 14/04/2026
 
 | Responsável                       | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 
