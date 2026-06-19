@@ -1,0 +1,18 @@
+{
+  "chat": [
+    {
+      "id": 1,
+      "usuario": "Guilherme",
+      "mensagem": "O que é polarização política?",
+      "resposta": "É a divisão de opiniões entre grupos com visões opostas.",
+      "data": "2026-04-19 19:00"
+    },
+    {
+      "id": 2,
+      "usuario": "Guilherme",
+      "mensagem": "Como identificar fake news?",
+      "resposta": "Verificando a fonte, comparando com outras informações e analisando o conteúdo.",
+      "data": "2026-04-19 19:02"
+    }
+  ]
+}

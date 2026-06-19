@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Despolariza! – Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="#">
+      <img src="imgs/logo despolariza.PNG" alt="Despolariza!">
+      <span>Despolariza!</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Aprofundamento</a></li>
+      <li><a href="#">Fake News</a></li>
+      <li><a href="#">Chat</a></li>
+      <li><a href="#">Sobre</a></li>
+    </ul>
+    <div class="nav-search">
+      <input type="text" placeholder="🔍 Pesquisar…" />
+    </div>
+  </nav>
+
+  <div class="layout">
+
+    <aside>
+      <div class="sidebar-user">
+        <div class="avatar"></div>
+        <span>Usuário</span>
+      </div>
+      <p class="sidebar-history-title">Histórico de Mensagens</p>
+      <ul class="sidebar-history">
+        <li><a href="#">Exemplo 1</a></li>
+        <li><a href="#">Exemplo 2</a></li>
+        <li><a href="#">Exemplo 3</a></li>
+        <li><a href="#">Exemplo 4</a></li>
+      </ul>
+    </aside>
+
+    <main>
+
+      <div class="chat-messages" id="chatMessages"></div>
+      <div class="chat-welcome" id="chatWelcome">
+        <div class="chat-welcome-logo">
+          <img src="imgs/chat despolariza.PNG" alt="Logo Chat">
+          <span>Chat Despolariza!</span>
+        </div>
+        <div class="chips">
+          <span class="chip" onclick="enviarChip('Dúvidas')">Dúvidas</span>
+          <span class="chip" onclick="enviarChip('Comprovações')">Comprovações</span>
+          <span class="chip" onclick="enviarChip('Argumentos')">Argumentos</span>
+        </div>
+      </div>
+
+      <!-- Única barra de input -->
+      <div class="chat-input-bar">
+        <div class="input-wrap">
+          <input type="text" id="inputBar" placeholder="Como podemos ajudá-lo?" />
+          <button class="mic-btn" id="micBtn" onclick="iniciarReconhecimento()" title="Falar por voz">🎤</button>
+          <button class="send-btn" onclick="enviarMensagem()">➤</button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    let chatAtivo = false;
+
+    const chatWelcome  = document.getElementById('chatWelcome');
+    const chatMessages = document.getElementById('chatMessages');
+    const inputBar     = document.getElementById('inputBar');
+    const micBtn       = document.getElementById('micBtn');
+
+    function ativarChat() {
+      if (!chatAtivo) {
+        chatAtivo = true;
+        chatWelcome.style.display  = 'none';
+        chatMessages.style.display = 'flex';
+      }
+    }
+
+    function adicionarMensagem(texto, tipo) {
+      ativarChat();
+      const div = document.createElement('div');
+      div.classList.add('mensagem', tipo);
+      div.innerText = texto;
+      chatMessages.appendChild(div);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function respostaIA(pergunta) {
+      pergunta = pergunta.toLowerCase();
+      if (pergunta.includes('fake news'))
+        return 'Fake News são informações falsas divulgadas como verdadeiras. Sempre verifique a fonte antes de compartilhar!';
+      if (pergunta.includes('polarização') || pergunta.includes('polarizacao'))
+        return 'Polarização política é a divisão extrema de opiniões em grupos opostos. O Despolariza! ajuda a entender diferentes perspectivas.';
+      if (pergunta.includes('identificar'))
+        return 'Para identificar desinformação: verifique fontes confiáveis, compare com outros veículos e cheque a data da publicação.';
+      if (pergunta.includes('dúvidas') || pergunta.includes('duvidas'))
+        return 'Pode perguntar! Estou aqui para tirar suas dúvidas sobre política, fake news e polarização.';
+      if (pergunta.includes('comprovações') || pergunta.includes('comprovacoes'))
+        return 'Para comprovar informações, recomendo fontes como Agência Lupa, Aos Fatos e G1 Fato ou Fake.';
+      if (pergunta.includes('argumentos'))
+        return 'Bons argumentos se baseiam em fatos verificáveis. Evite falácias e sempre cite fontes confiáveis!';
+      return 'Desculpe, ainda estou aprendendo sobre esse assunto. Tente perguntar sobre fake news, polarização ou como identificar desinformação.';
+    }
+
+    function enviarMensagem() {
+      const texto = inputBar.value.trim();
+      if (!texto) return;
+      adicionarMensagem(texto, 'usuario');
+      inputBar.value = '';
+      setTimeout(() => adicionarMensagem(respostaIA(texto), 'ia'), 800);
+    }
+
+    function enviarChip(texto) {
+      adicionarMensagem(texto, 'usuario');
+      setTimeout(() => adicionarMensagem(respostaIA(texto), 'ia'), 800);
+    }
+
+    inputBar.addEventListener('keydown', e => { if (e.key === 'Enter') enviarMensagem(); });
+
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    function iniciarReconhecimento() {
+      if (!SpeechRecognition) {
+        adicionarMensagem('⚠️ Seu navegador não suporta reconhecimento de voz. Use o Chrome.', 'ia');
+        return;
+      }
+      const rec = new SpeechRecognition();
+      rec.lang = 'pt-BR';
+      rec.interimResults = false;
+
+      micBtn.classList.add('mic-ativo');
+      micBtn.disabled = true;
+
+      rec.start();
+
+      rec.onresult = function(event) {
+        const texto = event.results[0][0].transcript;
+        inputBar.value = texto;       
+        micBtn.classList.remove('mic-ativo');
+        micBtn.disabled = false;
+        enviarMensagem();             
+      };
+
+      rec.onerror = function() {
+        micBtn.classList.remove('mic-ativo');
+        micBtn.disabled = false;
+        adicionarMensagem('⚠️ Não consegui entender. Tente novamente.', 'ia');
+      };
+
+      rec.onend = function() {
+        micBtn.classList.remove('mic-ativo');
+        micBtn.disabled = false;
+      };
+    }
+  </script>
+
+</body>
+</html>
