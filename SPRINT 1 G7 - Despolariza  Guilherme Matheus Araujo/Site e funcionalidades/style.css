@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+nav {
+  background: #1a3fd4;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  height: 52px;
+  gap: 32px;
+}
+
+.nav-brand span,
+.nav-brand img {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  height: 32px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  flex: 1;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.nav-search input {
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 200px;
+  font-size: 14px;
+}
+
+
+.layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+aside {
+  width: 220px;
+  background: #d9d9d9;
+  border-right: 1px solid #bbb;
+  padding: 16px 12px;
+}
+
+.sidebar-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #888;
+}
+
+.sidebar-user span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.sidebar-history-title {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.sidebar-history {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar-history li a {
+  display: block;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #222;
+  text-decoration: none;
+}
+
+.sidebar-history li a:hover {
+  background: #bbb;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+}
+
+.chat-welcome {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.chat-welcome-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chat-welcome-logo img {
+  height: 40px;
+}
+
+.chat-welcome-logo span {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.chat-input-center .input-wrap {
+  width: 480px;
+  padding: 8px 8px 8px 20px;
+  border-radius: 28px;
+  border: 1.5px solid #bbb;
+}
+
+.chat-input-center input {
+  outline: none;
+  font-size: 15px;
+  color: #555;
+}
+
+.chips {
+  display: flex;
+  gap: 10px;
+}
+
+.chip {
+  padding: 6px 16px;
+  border: 1.5px solid #bbb;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.chat-input-bar {
+  padding: 14px 32px 18px;
+  border-top: 1px solid #ddd;
+  background: #fff;
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #bbb;
+  border-radius: 28px;
+  padding: 8px 16px;
+  gap: 10px;
+}
+
+.input-wrap input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+.send-btn {
+  background: #1a3fd4;
+  border: none;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
