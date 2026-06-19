@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Despolariza!</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top cabecalho">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+     <img src="Captura_de_tela_2026-05-07_194117.png" alt="Logo" width="200px" height="50%" class="d-inline-block align-text-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup" >
+      <div class="navbar-nav ">
+        <a class="nav-link active cabecalhocor" aria-current="page" href="#"><strong>Início</strong></a>
+        <a class="nav-link active cabecalhocor" aria-current="page" href="#"><strong>Aprofundamento</strong></a>
+        <a class="nav-link active cabecalhocor" aria-current="page" href="#"><strong>Fake News</strong></a>
+        <a class="nav-link active cabecalhocor" aria-current="page" href="#"><strong>Chat</strong></a>
+        <a class="nav-link active cabecalhocor" aria-current="page" href="#"><strong>Sobre</strong></a>
+      </div>
+      <form class="d-flex ms-5" role="search">
+        <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search"/>
+        <button class="btn btn-outline-primary" type="submit">Proucurar</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<main>
+        <h1 class="titulo">Porque a polarização política é um problema?</h1>
+        <div class="paragrafo">
+          <p>A polarização política torna-se um problema crítico porque ela paralisa a capacidade de uma sociedade resolver seus próprios conflitos. Quando o debate de ideias é substituído por uma guerra de identidades, as consequências afetam todas as esferas da vida comum.</p>
+        </div>
+         <div class="paragrafo">
+          <p> Em primeiro lugar, existe a paralisia institucional. Em um ambiente polarizado, a política deixa de ser o campo da negociação para se tornar um jogo de "tudo ou nada". O foco dos governantes e legisladores desvia da resolução de problemas reais, como economia, saúde e educaçã,  para a tarefa de impedir que o adversário obtenha qualquer tipo de vitória. Isso gera um imobilismo que impede o país de avançar em projetos de longo prazo.</p>
+        </div>
+         <div class="paragrafo">
+          <p> Em segundo lugar, ocorre a erosão da realidade compartilhada. A polarização extrema faz com que os grupos parem de concordar até mesmo sobre fatos básicos. Como cada lado consome apenas informações que confirmam seus próprios preconceitos, cria-se um cenário onde o diálogo é impossível, pois as partes não habitam mais o mesmo universo informativo. Sem fatos comuns, não há base para a construção de soluções coletivas.</p>
+        </div>
+        <div class="paragrafo">
+          <p>Por fim, o problema mais grave é o esgarçamento do tecido social. A polarização transforma a discordância em hostilidade pessoal, rompendo laços entre amigos, vizinhos e familiares. Esse clima de "nós contra eles" desumaniza quem pensa diferente e abre caminho para o autoritarismo, já que as pessoas passam a aceitar a quebra de regras democráticas desde que seja para derrotar o "inimigo". No fim, a sociedade perde sua coesão e sua capacidade de conviver com a pluralidade, que é a base de qualquer democracia estável.</p>
+        </div>
+</main>
+<div class="container">
+  <div style="max-width: 1000px; margin: 0 auto;">
+
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/5uOIsk8gRO8" title="Vídeo 1" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/w1kpM2QH5Q8" title="Vídeo 2" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/1lK1vvwkWcA" title="Vídeo 3" allowfullscreen></iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
+<div style="max-width: 1000px; margin: 10px auto; padding: 0 15px;">
+  <p id="info-titulo" style="font-weight: bold; font-size: 16px; margin-bottom: 4px;"></p>
+  <p id="info-descricao" style="font-size: 14px; color: #555; margin-bottom: 4px;"></p>
+  <p id="info-autor" style="font-size: 13px; color: #888;"></p>
+</div>
+<div style="text-align: center; margin-top: 15px;">
+  <button id="btn-miniplayer" onclick="abrirMiniplayer()" disabled style="
+    background-color: #0F3EE9;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  ">⛶ Abrir Miniplayer</button>
+</div>
+<div style="text-align: center; margin-top: 70px;">
+
+  <h1><strong>Segue abaixo links de sites para maior aprofundamento:</strong></h1>
+
+  <p><a href="https://www.politize.com.br/o-que-e-polarizacao-politica/" target="_blank" style="color: black;">https://www.politize.com.br/o-que-e-polarizacao-politica/</a></p>
+
+  <p><a href="https://www.iea.usp.br/eventos/confianca-polarizacao-democracia" target="_blank" style="color: black;">https://www.iea.usp.br/eventos/confianca-polarizacao-democracia</a></p>
+
+  <p><a href="https://fundacaofhc.org.br/tecnologia-e-polarizacao-politica/" target="_blank" style="color: black;">https://fundacaofhc.org.br/tecnologia-e-polarizacao-politica/</a></p>
+
+  <p><a href="https://www.bbc.com/portuguese/geral-54919315" target="_blank" style="color: black;">https://www.bbc.com/portuguese/geral-54919315</a></p>
+
+</div>
+<div style="max-width: 700px; margin: 60px auto 40px auto; padding: 0 20px;">
+  <h2 style="font-weight: bold; margin-bottom: 20px;">Deixe seu comentário:</h2>
+  <input id="input-nome" type="text" placeholder="Seu nome" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px;"/>
+  <textarea id="input-comentario" placeholder="Escreva seu comentário..." rows="4" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; resize: vertical;"></textarea>
+  <button onclick="salvarComentario()" style="margin-top: 10px; background-color: #0F3EE9; color: white; border: none; border-radius: 6px; padding: 10px 20px; font-size: 14px; font-weight: bold; cursor: pointer;">Enviar comentário</button>
+  <div id="lista-comentarios" style="margin-top: 30px;"></div>
+</div>
+<footer class="rodape">
+    <div class="rodape-conteudo">
+        <p><strong>Despolariza</strong> — Ensinando sobre polarização</p>
+        <p>© 2026 Despolariza. Todos os direitos reservados.</p>
+        <div class="rodape-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+        </div>
+    </div>
+  </footer>
+    </header>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="code.js"></script>
+</body>
+</html>
