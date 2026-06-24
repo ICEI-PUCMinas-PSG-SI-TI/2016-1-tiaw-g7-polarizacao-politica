@@ -1,0 +1,152 @@
+{
+  "usuário": [
+    {
+      "id": "1",
+      "nome": "Augusto Barbosa Ferreira",
+      "email": "augustoB@gmail.com",
+      "senha": "12345",
+      "perfil": "leitor",
+      "data_de_criacao": "04/05/2026",
+      "ultima_data_de_acesso": "12/06/2026",
+      "preferencias": {
+        "categorias": [
+          "Presidência",
+          "Juridico"
+        ],
+        "fontes": [
+          "G1",
+          "CNN"
+        ]
+      },
+      "notificacao": {
+        "ativo": true,
+        "emai": true,
+        "SMS": false
+      }
+    }
+  ],
+  "noticia": [
+    {
+      "id": "1",
+      "manchete": "Reforma da previdência divide gerações e intensifica disputa de narrativas",
+      "resumo": "A reforma da Previdência reacende o debate público ao dividir opiniões. Enquanto defensores destacam a necessidade de equilíbrio fiscal, críticos apontam impactos negativos para trabalhadores e aumento das desigualdades.",
+      "autor": "João Matheus",
+      "data_de_publicacao": "12/06/2026",
+      "data_de_atualizacao": "25/07/2026",
+      "tags": [
+        "Legisalação",
+        "Presidência",
+        "Senado"
+      ],
+      "imagem": {
+        "url": "https://www.sindeesmat.org.br/wp-content/uploads/2018/01/33d803b2-2e52-45e5-b810-5a2defd895db.jpg",
+        "legenda": "Reforma da Previdência"
+      },
+      "fonte": {
+        "nome": "G1",
+        "url": "https://g1.globo.com/mg/minas-gerais/"
+      }
+    },
+    {
+      "id": "2",
+      "manchete": "Liderança política defende pautas econômicas em meio a cenário de tensão nacional",
+      "resumo": "Lideranças políticas reforçam a defesa de pautas econômicas em meio a um cenário de tensão nacional, destacando a importância de medidas para estabilidade e crescimento do país.",
+      "autor": "João Silva",
+      "data_de_publicacao": "16/09/2026",
+      "data_de_atualizacao": "23/09/2026",
+      "tags": [
+        "Legisalação",
+        "Presidência",
+        "Senado"
+      ],
+      "imagem": {
+        "url": "https://www.camara.leg.br/midias/image/2024/05/img20240506204933266-768x473.jpg",
+        "legenda": "Liderança política e economia"
+      },
+      "fonte": {
+        "nome": "G1",
+        "url": "https://g1.globo.com/mg/minas-gerais/"
+      }
+    },
+    {
+      "id": "3",
+      "manchete": "Polarização política domina debate e preocupa especialistas no Brasil",
+      "resumo": "A polarização política domina o debate no Brasil e preocupa especialistas, que alertam para os impactos negativos no diálogo e na tomada de decisões no país.",
+      "autor": "João Golias",
+      "data_de_publicacao": "30/10/2026",
+      "data_de_atualizacao": "14/11/2026",
+      "tags": [
+        "Legisalação",
+        "Presidência",
+        "Senado"
+      ],
+      "imagem": {
+        "url": "https://i.ytimg.com/vi/lhDnQMdxStY/maxresdefault.jpg",
+        "legenda": "Polarização política no Brasil"
+      },
+      "fonte": {
+        "nome": "G1",
+        "url": "https://g1.globo.com/mg/minas-gerais/"
+      }
+    }
+  ],
+  "pagina": 1,
+  "total": 3,
+  "videos": [
+    {
+      "id": "1",
+      "titulo": "O que é polarização política?",
+      "descricao": "Um guia explicativo sobre o fenômeno da polarização política no Brasil e seus impactos na sociedade.",
+      "autor": "João Matheus",
+      "data_de_publicacao": "12/06/2026",
+      "duracao": "08:45",
+      "thumbnail": {
+        "url": "https://i.ytimg.com/vi/lhDnQMdxStY/maxresdefault.jpg",
+        "legenda": "O que é polarização política?"
+      },
+      "video": {
+        "url": "https://www.youtube.com/watch?v=lhDnQMdxStY",
+        "plataforma": "YouTube"
+      },
+      "tags": [
+        "Polarização",
+        "Política"
+      ]
+    },
+    {
+      "id": "2",
+      "titulo": "Como a polarização afeta a democracia?",
+      "descricao": "Especialistas explicam os riscos da polarização política para a democracia brasileira.",
+      "autor": "João Das Neves",
+      "data_de_publicacao": "20/06/2026",
+      "duracao": "12:10",
+      "thumbnail": {
+        "url": "https://i.ytimg.com/vi/lhDnQMdxStY/maxresdefault.jpg",
+        "legenda": "Polarização e democracia"
+      },
+      "video": {
+        "url": "https://www.youtube.com/watch?v=lhDnQMdxStY",
+        "plataforma": "YouTube"
+      },
+      "tags": [
+        "Polarização",
+        "Democracia"
+      ]
+    }
+  ],
+  "verificador_de_fake_news": [],
+  "chatbot": [
+    {
+      "id": "1",
+      "tipo": "privado",
+      "chat_de_conversa": {
+        "remetente_id": 1,
+        "mensagem": "O que é polarização política?",
+        "chatbot": true,
+        "resposta": "É a divisão de opiniões entre grupos com visões opostas."
+      },
+      "ultima_data_de_acesso": "16/08/2026"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,10 @@
+{
+    "liveServer.settings.multiRootWorkspaceName": "VerificadorDeFakeNews",
+    "liveServer.settings.ignoreFiles": [
+        ".vscode/**",
+        "**/*.scss",
+        "**/*.sass",
+        "dados.json"
+    ],
+    "liveServer.settings.port": 5501
+}

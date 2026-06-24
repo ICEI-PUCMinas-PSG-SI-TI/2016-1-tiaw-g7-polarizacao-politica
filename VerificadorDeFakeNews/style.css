@@ -1,0 +1,242 @@
+*{
+    margin: 0%;
+}
+
+.cabecalho{
+   background-color: #0F3EE9; 
+    border: none; 
+    box-shadow: none;
+    position: fixed;
+}
+
+.cabecalhocor{
+    color: rgb(255, 255, 255) !important;
+    
+}
+
+main {
+    padding-top: 80px; 
+}
+
+.titulo{
+    padding-top: 40px;
+    margin-left: 20%;
+    font-weight: bold;
+    color:black
+}
+
+.titulo2{
+    padding-top: 90px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+.paragrafo{
+    padding-top: 40px;
+    margin-left: 20%;
+    max-width: 60%;
+    font-size: x-large;
+    color: black;
+    
+}
+
+.caixa {
+    background-color: #e0e0e0;
+    max-width: 60%;
+    min-height: 350px;
+    margin: 100px auto;
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: larger;
+
+}
+
+textarea {
+    width: 50%;
+    padding: 6px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    resize: none !important;
+    overflow: hidden;
+    height: 40px; 
+}
+
+.espaco{
+    margin-bottom: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#btnEnviar {
+    background-color: #0F3EE9;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#resposta{
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+}
+
+#resposta p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.rodape {
+    
+    color: rgb(110, 110, 110);
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+}
+
+.rodape-conteudo p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.rodape-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.rodape-links a {
+    color: rgb(110, 110, 110);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.rodape-links a:hover {
+    text-decoration: underline;
+}
+
+
+
+#btnHistorico {
+    background-color: transparent;
+    color: #0F3EE9;
+    border: 1px solid #0F3EE9;
+    padding: 6px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#btnHistorico:hover {
+    background-color: #0F3EE9;
+    color: white;
+}
+
+#historico {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#lista-historico {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.item-historico {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin: 10px auto;
+    width: 60%;
+    text-align: left;
+    line-height: 1.8;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.item-conteudo {
+    flex: 1;
+}
+
+.btnVerMais {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #363637;
+    padding: 0 0 0 10px;
+    align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        margin-left: 5%;
+        font-size: 1.5rem;
+    }
+
+    .titulo2 {
+        font-size: 1.5rem;
+        padding-top: 40px;
+    }
+
+    .paragrafo {
+        margin-left: 5%;
+        max-width: 90%;
+        font-size: medium;
+        padding-top: 20px;
+    }
+
+    .caixa {
+        max-width: 90%;
+        min-height: auto;
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    textarea {
+        width: 90%;
+    }
+
+    #btnEnviar {
+        padding: 10px 20px;
+        width: 80%;
+    }
+
+    #resposta {
+        width: 85%;
+    }
+
+    .rodape-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+  #btnHistorico:active {
+        background-color: #0F3EE9;
+        color: white;
+    }
+
+    .item-historico {
+    width: 90%;
+    padding: 10px 15px;
+}
+
+
+}
