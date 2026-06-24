@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despolariza!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top cabecalho">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="/imgs/despolariza.png" alt="Logo" width="200px" height="50%" class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active cabecalhocor" aria-current="page" href="#"><strong>Início</strong></a>
+                        <a class="nav-link active cabecalhocor" aria-current="page" href="#"><strong>Aprofundamento</strong></a>
+                        <a class="nav-link active cabecalhocor" aria-current="page" href="#"><strong>Fake News</strong></a>
+                        <a class="nav-link active cabecalhocor" aria-current="page" href="#"><strong>Chat</strong></a>
+                        <a class="nav-link active cabecalhocor" aria-current="page" href="#"><strong>Sobre</strong></a>
+                    </div>
+                    <form class="d-flex ms-5" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search"/>
+                        <button class="btn btn-outline-primary" type="submit">Procurar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main class="main-content">
+
+        <!-- Hero Carrossel -->
+        <div id="heroCarrossel" class="carousel slide hero-banner" data-bs-ride="carousel" data-bs-interval="4000">
+
+            <!-- Indicadores (renderizados pelo script.js) -->
+            <div class="carousel-indicators" id="carrosselIndicadores"></div>
+
+            <!-- Slides (renderizados pelo script.js) -->
+            <div class="carousel-inner h-100" id="carrosselInner"></div>
+
+            <!-- Controles anterior / próximo -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarrossel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarrossel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+
+        </div>
+
+        <!-- Artigo Principal -->
+        <section class="container py-5">
+            <h1 class="text-center fw-bold mb-4 artigo-titulo">O que é polarização política?</h1>
+
+            <p class="artigo-paragrafo">
+                A polarização pode ser compreendida como um processo de afastamento radical entre grupos dentro de uma sociedade,
+                onde o espaço de diálogo comum é substituído por uma barreira de hostilidade. Diferente do simples debate de ideias,
+                que é o motor das sociedades livres, a polarização transforma a discordância em uma questão de identidade. Nesse cenário,
+                o indivíduo deixa de avaliar propostas de forma isolada e passa a aceitar ou rejeitar informações baseando-se apenas em
+                quem as diz. O mundo é então simplificado em dois blocos rígidos e opostos, onde o "meio-termo" é visto como traição ou fraqueza.
+            </p>
+
+            <p class="artigo-paragrafo">
+                Esse fenômeno é alimentado por uma dinâmica emocional profunda. Quando as pessoas se sentem ameaçadas em seus
+                valores fundamentais, elas tendem a buscar abrigo em grupos que pensam exatamente como elas. As redes sociais
+                potencializam esse movimento ao criar ecossistemas onde apenas opiniões semelhantes circulam, o que gera uma falsa
+                percepção de consenso absoluto dentro do próprio grupo e uma demonização crescente do lado de fora. Assim, a verdade
+                deixa de ser um fato objetivo para se tornar algo que pertence a um dos lados, tornando quase impossível a construção de
+                pontes ou o reconhecimento de erros próprios.
+            </p>
+
+            <p class="artigo-paragrafo">
+                As consequências desse estado de coisas são visíveis no cotidiano através do esgarçamento dos laços sociais e da
+                dificuldade em resolver problemas coletivos. Quando a política se torna uma guerra cultural de "nós contra eles", as
+                instituições perdem a eficiência e o foco no bem comum é substituído pela vontade de aniquilar o adversário. Superar esse
+                ciclo exige mais do que apenas tolerância; requer o esforço consciente de reconhecer a complexidade do outro e entender
+                que a pluralidade de visões não é um erro do sistema, mas a base de uma convivência equilibrada.
+            </p>
+        </section>
+
+        <!-- Seção Notícias Rápidas -->
+        <section class="bg-white border-top py-5">
+            <div class="text-center mb-4">
+                <span class="noticias-tag">Notícias rápidas</span>
+            </div>
+            <div class="container">
+                <!-- Cards renderizados pelo script.js -->
+                <div class="row g-4" id="listaCards"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="rodape mt-5 py-4 text-center">
+        <p class="mb-1"><strong>Despolariza</strong> — Ensinando sobre polarização</p>
+        <p class="mb-2">© 2026 Despolariza. Todos os direitos reservados.</p>
+        <div class="d-flex justify-content-center gap-4">
+            <a href="#" class="rodape-links">Instagram</a>
+            <a href="#" class="rodape-links">Facebook</a>
+            <a href="#" class="rodape-links">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- ===== MODAL DE NOTÍCIA ===== -->
+    <div id="modalNoticia" class="modal-noticia">
+        <div class="modal-noticia-box">
+            <div class="modal-noticia-header">
+                <span class="modal-noticia-categoria" id="modalCategoria"></span>
+                <button class="modal-noticia-fechar" onclick="fecharModal()" aria-label="Fechar">✕</button>
+            </div>
+            <img class="modal-noticia-img" id="modalImagem" src="" alt=""/>
+            <div class="modal-noticia-body">
+                <div class="modal-noticia-meta">
+                    <span>📅 <span id="modalData"></span></span>
+                    <span>✍️ <span id="modalAutor"></span></span>
+                    <span>🔗 <span id="modalFonte"></span></span>
+                </div>
+                <h2 class="modal-noticia-titulo" id="modalTitulo"></h2>
+                <p class="modal-noticia-resumo" id="modalResumo"></p>
+                <p class="modal-noticia-conteudo" id="modalConteudo"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

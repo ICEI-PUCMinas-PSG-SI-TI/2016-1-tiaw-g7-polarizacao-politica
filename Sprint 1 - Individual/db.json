@@ -1,0 +1,164 @@
+{
+    "usuário": [
+        {
+            "id": 1,
+            "nome": "Augusto Barbosa Ferreira",
+            "email": "augustoB@gmail.com",
+            "senha": "12345",
+            "perfil": "leitor",
+            "data_de_criacao": "04/05/2026",
+            "ultima_data_de_acesso": "12/06/2026",
+            "preferencias": {
+                "categorias": ["Presidência", "Juridico"],
+                "fontes": ["G1", "CNN"]
+            },
+            "notificacao": {
+                "ativo": true,
+                "emai": true,
+                "SMS": false
+            }
+        }
+    ],
+
+    "slides": [
+        {
+            "id": 1,
+            "titulo": "Augusto Cury defende 'política de projetos' e critica polarização",
+            "subtitulo": "Em encontro com lideranças empresariais na ACSP, pré-candidato à presidência defende diálogo institucional e critica radicalização política",
+            "imagem": "https://www.facesp.com.br/upload/ckeditor/2026/Maio/Cury_site.jpeg",
+            "alt": "Augusto Cury defende política de projetos",
+            "url": "https://www.facesp.com.br/noticia/augusto-cury-defende-politica-de-projetos-e-critica-polarizacao"
+        },
+        {
+            "id": 2,
+            "titulo": "Políticos defendem ajuste fiscal e debate político durante evento nos EUA",
+            "subtitulo": "Durante a Brazil Week em Nova York, governadores Eduardo Leite e Elmano de Freitas pregam equilíbrio fiscal e menos polarização",
+            "imagem": "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/05/Renata-1.jpg",
+            "alt": "Políticos brasileiros debatem ajuste fiscal nos EUA",
+            "url": "https://www.cnnbrasil.com.br/politica/politicos-defendem-ajuste-fiscal-e-debate-politico-durante-evento-nos-eua/"
+        },
+        {
+            "id": 3,
+            "titulo": "Economia continua no centro do debate eleitoral apesar da polarização política",
+            "subtitulo": "Análise do Estadão mostra que temas econômicos seguem dominando a disputa de 2026 mesmo em meio ao acirramento político",
+            "imagem": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1400&q=80",
+            "alt": "Economia e debate eleitoral 2026",
+            "url": "https://www.estadao.com.br/economia/alvaro-gribel/economia-continua-no-centro-do-debate-eleitoral-apesar-da-polarizacao-politica/"
+        }
+    ],
+
+    "noticia": [
+        {
+            "id": 1,
+            "manchete": "Reforma da previdência divide gerações e intensifica disputa de narrativas",
+            "resumo": "A reforma da Previdência reacende o debate público ao dividir opiniões. Enquanto defensores destacam a necessidade de equilíbrio fiscal, críticos apontam impactos negativos para trabalhadores e aumento das desigualdades.",
+            "autor": "João Matheus",
+            "data_de_publicacao": "12/06/2026",
+            "data_de_atualizacao": "25/07/2026",
+            "tags": ["Legislação", "Presidência", "Senado"],
+            "imagem": {
+                "url": "/imgs/noticia1.avif",
+                "legenda": "Reforma da Previdência"
+            },
+            "fonte": {
+                "nome": "G1",
+                "url": "https://g1.globo.com/mg/minas-gerais/"
+            }
+        },
+        {
+            "id": 2,
+            "manchete": "Liderança política defende pautas econômicas em meio a cenário de tensão nacional",
+            "resumo": "Lideranças políticas reforçam a defesa de pautas econômicas em meio a um cenário de tensão nacional, destacando a importância de medidas para estabilidade e crescimento do país.",
+            "autor": "João Silva",
+            "data_de_publicacao": "16/09/2026",
+            "data_de_atualizacao": "23/09/2026",
+            "tags": ["Legislação", "Presidência", "Senado"],
+            "imagem": {
+                "url": "/imgs/noticia2.webp",
+                "legenda": "Liderança política e economia"
+            },
+            "fonte": {
+                "nome": "G1",
+                "url": "https://g1.globo.com/mg/minas-gerais/"
+            }
+        },
+        {
+            "id": 3,
+            "manchete": "Polarização política domina debate e preocupa especialistas no Brasil",
+            "resumo": "A polarização política domina o debate no Brasil e preocupa especialistas, que alertam para os impactos negativos no diálogo e na tomada de decisões no país.",
+            "autor": "João Golias",
+            "data_de_publicacao": "30/10/2026",
+            "data_de_atualizacao": "14/11/2026",
+            "tags": ["Legislação", "Presidência", "Senado"],
+            "imagem": {
+                "url": "/imgs/noticia3.jpeg",
+                "legenda": "Polarização política no Brasil"
+            },
+            "fonte": {
+                "nome": "G1",
+                "url": "https://g1.globo.com/mg/minas-gerais/"
+            }
+        }
+    ],
+
+    "videos": [
+        {
+            "id": 1,
+            "titulo": "O que é polarização política?",
+            "descricao": "Um guia explicativo sobre o fenômeno da polarização política no Brasil e seus impactos na sociedade.",
+            "autor": "João Matheus",
+            "data_de_publicacao": "12/06/2026",
+            "duracao": "08:45",
+            "thumbnail": {
+                "url": "https://i.ytimg.com/vi/lhDnQMdxStY/maxresdefault.jpg",
+                "legenda": "O que é polarização política?"
+            },
+            "video": {
+                "url": "https://www.youtube.com/watch?v=lhDnQMdxStY",
+                "plataforma": "YouTube"
+            },
+            "tags": ["Polarização", "Política"]
+        },
+        {
+            "id": 2,
+            "titulo": "Como a polarização afeta a democracia?",
+            "descricao": "Especialistas explicam os riscos da polarização política para a democracia brasileira.",
+            "autor": "João Das Neves",
+            "data_de_publicacao": "20/06/2026",
+            "duracao": "12:10",
+            "thumbnail": {
+                "url": "https://i.ytimg.com/vi/lhDnQMdxStY/maxresdefault.jpg",
+                "legenda": "Polarização e democracia"
+            },
+            "video": {
+                "url": "https://www.youtube.com/watch?v=lhDnQMdxStY",
+                "plataforma": "YouTube"
+            },
+            "tags": ["Polarização", "Democracia"]
+        }
+    ],
+
+    "verificador_de_fake_news": [
+        {
+            "id": 123,
+            "usuario_id": 1,
+            "texto_da_noticia": "Texto suspeito inserido pelo usuário",
+            "data_da_noticia": "17/04/2026"
+        }
+    ],
+
+    "chatbot": [
+        {
+            "id": 1,
+            "tipo": "privado",
+            "chat_de_conversa": {
+                "remetente_id": 1,
+                "mensagem": "O que é polarização política?",
+                "chatbot": true,
+                "resposta": "É a divisão de opiniões entre grupos com visões opostas."
+            },
+            "ultima_data_de_acesso": "16/08/2026"
+        }
+    ]
+}
+
