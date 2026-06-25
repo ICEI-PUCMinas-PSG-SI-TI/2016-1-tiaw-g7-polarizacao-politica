@@ -1,0 +1,113 @@
+{
+  "ComentariosNoticia": [
+    {
+      "idNoticia": "noticia1",
+      "mediaAvaliacao": 4.5,
+      "comentarios": [
+        {
+          "usuario_id": 1,
+          "nota": 5,
+          "texto": "Excelente notícia!"
+        }
+      ],
+      "id": "vI40GwQwToU"
+    },
+    {
+      "idNoticia": "noticia2",
+      "mediaAvaliacao": 4,
+      "comentarios": [
+        {
+          "usuario_id": 2,
+          "nota": 4,
+          "texto": "Muito interessante."
+        }
+      ],
+      "id": "EQX9dWw6H18"
+    },
+    {
+      "idNoticia": "noticia3",
+      "mediaAvaliacao": 5,
+      "comentarios": [
+        {
+          "usuario_id": 3,
+          "nota": 5,
+          "texto": "Ótimo conteúdo."
+        }
+      ],
+      "id": "46YtbTvf0tU"
+    }
+  ],
+  "pagina": 1,
+  "total": 3,
+  "podcast": [
+    {
+      "id": "1",
+      "titulo": "Porque a polarização política é um problema?",
+      "duracao": "18:54",
+      "autor": "Despolariza",
+      "url": "https://exemplo.com/podcast1.mp3",
+      "ouvido": false
+    }
+  ],
+  "verificador_de_imparcialidade": [],
+  "chatIA": [
+    {
+      "id": "1",
+      "usuario_id": 1,
+      "entrada_de_voz": true,
+      "mensagem": "O que é Fake News?",
+      "respostaIA": "Fake News são informações falsas divulgadas como verdadeiras.",
+      "data": "2026-05-23 15:30"
+    },
+    {
+      "id": "2",
+      "usuario_id": 2,
+      "entrada_de_voz": false,
+      "mensagem": "O que é polarização política?",
+      "respostaIA": "Polarização política é a divisão extrema de opiniões entre grupos.",
+      "data": "2026-05-23 15:32"
+    },
+    {
+      "id": "3",
+      "usuario_id": 3,
+      "entrada_de_voz": true,
+      "mensagem": "Como identificar notícias falsas?",
+      "respostaIA": "Verifique fontes confiáveis e compare diferentes informações antes de compartilhar.",
+      "data": "2026-05-23 15:35"
+    }
+  ],
+  "Analise_de_Estatistica_Politica": [
+    {
+      "pessoas": [
+        {
+          "id": 1,
+          "lado_politico": "Esquerda"
+        },
+        {
+          "id": 2,
+          "lado_politico": "Direita"
+        },
+        {
+          "id": 3,
+          "lado_politico": "Nenhum"
+        }
+      ],
+      "grafico": {
+        "Esquerda": {
+          "quantidade": 1,
+          "percentual": 33.33
+        },
+        "Direita": {
+          "quantidade": 1,
+          "percentual": 33.33
+        },
+        "Nenhum": {
+          "quantidade": 1,
+          "percentual": 33.33
+        }
+      },
+      "id": "MKZ56AArLl8"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
