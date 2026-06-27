@@ -1,0 +1,149 @@
+{
+  "usuário": [
+    {
+      "id": "1",
+      "nome": "Augusto Barbosa Ferreira",
+      "email": "augustoB@gmail.com",
+      "senha": "12345",
+      "perfil": "leitor",
+      "data_de_criacao": "04/05/2026",
+      "ultima_data_de_acesso": "12/06/2026",
+      "preferencias": {
+        "categorias": [
+          "Presidência",
+          "Juridico"
+        ],
+        "fontes": [
+          "G1",
+          "CNN"
+        ]
+      },
+      "notificacao": {
+        "ativo": true,
+        "emai": true,
+        "SMS": false
+      }
+    }
+  ],
+  "slides": [
+    {
+      "id": "1",
+      "titulo": "Augusto Cury defende 'política de projetos' e critica polarização",
+      "subtitulo": "Em encontro com lideranças empresariais na ACSP, pré-candidato à presidência defende diálogo institucional e critica radicalização política",
+      "imagem": "https://www.facesp.com.br/upload/ckeditor/2026/Maio/Cury_site.jpeg",
+      "alt": "Augusto Cury defende política de projetos",
+      "url": "https://www.facesp.com.br/noticia/augusto-cury-defende-politica-de-projetos-e-critica-polarizacao"
+    },
+    {
+      "id": "2",
+      "titulo": "Políticos defendem ajuste fiscal e debate político durante evento nos EUA",
+      "subtitulo": "Durante a Brazil Week em Nova York, governadores Eduardo Leite e Elmano de Freitas pregam equilíbrio fiscal e menos polarização",
+      "imagem": "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/05/Renata-1.jpg",
+      "alt": "Políticos brasileiros debatem ajuste fiscal nos EUA",
+      "url": "https://www.cnnbrasil.com.br/politica/politicos-defendem-ajuste-fiscal-e-debate-politico-durante-evento-nos-eua/"
+    },
+    {
+      "id": "3",
+      "titulo": "Economia continua no centro do debate eleitoral apesar da polarização política",
+      "subtitulo": "Análise do Estadão mostra que temas econômicos seguem dominando a disputa de 2026 mesmo em meio ao acirramento político",
+      "imagem": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1400&q=80",
+      "alt": "Economia e debate eleitoral 2026",
+      "url": "https://www.estadao.com.br/economia/alvaro-gribel/economia-continua-no-centro-do-debate-eleitoral-apesar-da-polarizacao-politica/"
+    }
+  ],
+  "noticia": [
+    {
+      "id": "1",
+      "manchete": "57% dos brasileiros veem mais malefícios do que benefícios na polarização política",
+      "resumo": "Pesquisa da Ipsos-Ipec revela que a maioria dos brasileiros considera a polarização prejudicial à democracia e ao convívio social, relatando impactos concretos no cotidiano, de conflitos familiares à autocensura nas redes sociais.",
+      "autor": "Redação CNN Brasil",
+      "data_de_publicacao": "05/02/2026",
+      "data_de_atualizacao": "05/02/2026",
+      "tags": [
+        "Polarização",
+        "Democracia",
+        "Eleições"
+      ],
+      "imagem": {
+        "url": "imgs/noticia1.webp",
+        "legenda": "Polarização política no Brasil"
+      },
+      "fonte": {
+        "nome": "CNN Brasil",
+        "url": "https://www.cnnbrasil.com.br/forum-opiniao/encruzilhada-de-2026-polarizacao-desconfianca-e-governabilidade/"
+      }
+    },
+    {
+      "id": "2",
+      "manchete": "Fake news sobre eleições disparam com uso de IA: produção de conteúdo falso cresce 308% no Brasil",
+      "resumo": "Estudo inédito do Observatório Lupa mostra que entre 2024 e 2025 a criação e disseminação de conteúdos falsos com inteligência artificial cresceram 308%, tornando a desinformação mais sofisticada e difícil de detectar às vésperas das eleições de 2026.",
+      "autor": "Redação CRN1",
+      "data_de_publicacao": "29/05/2026",
+      "data_de_atualizacao": "29/05/2026",
+      "tags": [
+        "Fake News",
+        "Inteligência Artificial",
+        "Eleições"
+      ],
+      "imagem": {
+        "url": "imgs/noticia2.webp",
+        "legenda": "Desinformação e inteligência artificial"
+      },
+      "fonte": {
+        "nome": "CRN1",
+        "url": "https://crn1.com.br/2026/05/inteligencia-artificial-promove-escalada-de-desinformacao-no-brasil"
+      }
+    },
+    {
+      "id": "3",
+      "manchete": "TSE intensifica alerta contra deepfakes e desinformação a menos de seis meses das eleições",
+      "resumo": "O Tribunal Superior Eleitoral aprovou novas resoluções proibindo deepfakes e exigindo identificação de conteúdos gerados por IA nas campanhas eleitorais de 2026, enquanto a ministra Cármen Lúcia alerta que mentiras tecnológicas podem comprometer a vontade livre do eleitor.",
+      "autor": "Redação Diário Tocantinense",
+      "data_de_publicacao": "22/04/2026",
+      "data_de_atualizacao": "22/04/2026",
+      "tags": [
+        "Eleições",
+        "Fake News",
+        "TSE"
+      ],
+      "imagem": {
+        "url": "imgs/noticia3.webp",
+        "legenda": "TSE e combate à desinformação"
+      },
+      "fonte": {
+        "nome": "Diário Tocantinense",
+        "url": "https://diariotocantinense.com.br/2026/04/22/eleicoes-2026-sob-cerco-da-mentira-avanco-das-fake-news-poe-eleitor-em-risco-e-amplia-alerta-da-justica/"
+      }
+    }
+  ],
+  "comentarios": [
+    {
+      "noticiaId": 1,
+      "texto": "É preocupante ver como a polarização está afetando até as relações familiares. Precisamos aprender a dialogar melhor.",
+      "timestamp": 1780675614990,
+      "id": "4UX95ULlHnY"
+    }
+  ],
+  "avaliacoes": [
+    {
+      "noticiaId": 1,
+      "valor": 5,
+      "id": "fWPd6yHfJgw"
+    },
+    {
+      "noticiaId": 1,
+      "valor": 4,
+      "id": "vKBtFwRSPnI"
+    },
+    {
+      "noticiaId": 1,
+      "valor": 4,
+      "id": "qOTHQhyGLr4"
+    },
+    {
+      "noticiaId": 1,
+      "valor": 5,
+      "id": "JcdPWAUADRM"
+    }
+  ]
+}
