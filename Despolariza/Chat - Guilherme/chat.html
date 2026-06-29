@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat - Despolariza!</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../global.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+        <nav class="navbar navbar-expand-lg fixed-top cabecalho">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../imgs/despolariza.png" alt="Logo" width="200px" height="50%" class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link cabecalhocor" href="../index.html"><strong>Início</strong></a>
+                        <a class="nav-link cabecalhocor" href="../Aprofundamento - Marcelo/Aprofundamento.html"><strong>Aprofundamento</strong></a>
+                        <div class="nav-item dropdown">
+                            <a class="nav-link cabecalhocor dropdown-toggle" href="#" id="fakeNewsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <strong>Verificadores</strong>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="fakeNewsDropdown">
+                                <li><a class="dropdown-item" href="../Fake News - André/FakeNews.html">Fake News</a></li>
+                                <li><a class="dropdown-item" href="../Imparcialidade - André/Imparcialidade.html">Imparcialidade</a></li>
+                                
+                            </ul>
+                        </div>
+                        <a class="nav-link cabecalhocor" href="../Lados Politicos - Rubens/Politica.html"><strong>Lados Políticos</strong></a>
+                        <a class="nav-link active cabecalhocor" aria-current="page" href="chat.html"><strong>Chat</strong></a>
+                        <a class="nav-link cabecalhocor" href="../Sobre - Rubens/Sobre.html"><strong>Sobre</strong></a>
+                    </div>
+                    <form class="d-flex ms-5" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search"/>
+                        <button class="btn btn-outline-primary" type="submit">Procurar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+  <div class="layout">
+    <aside>
+  <div style="display:flex; align-items:center; justify-content:space-between;">
+    <p class="sidebar-history-title">Histórico de Mensagens</p>
+    <button type="button" onclick="novaConversa()" title="Nova conversa" style="background:none; border:none; font-size:18px; cursor:pointer;">+</button>
+  </div>
+  <ul class="sidebar-history"></ul>
+</aside>
+  
+  <main>
+
+  <div class="chat-messages" id="chatMessages"></div>
+<div class="chat-welcome" id="chatWelcome">
+  <div class="chat-welcome-logo">
+    <img src="../imgs/chat despolariza.PNG" alt="Logo Chat">
+    <span>Chat Despolariza!</span>
+  </div>
+  <div class="chips">
+    <span class="chip" onclick="enviarChip('Dúvidas')">Dúvidas</span>
+    <span class="chip" onclick="enviarChip('Comprovações')">Comprovações</span>
+    <span class="chip" onclick="enviarChip('Argumentos')">Argumentos</span>
+  </div>
+</div>
+
+  <!-- Única barra de input -->
+  <div class="chat-input-bar">
+    <div class="input-wrap">
+      <input type="text" id="inputBar" placeholder="Como podemos ajudá-lo?" />
+      <button class="mic-btn" id="micBtn" type="button" onclick="iniciarReconhecimento()" title="Falar por voz">🎤</button>
+      <button class="send-btn" type="button" onclick="enviarMensagem()">➤</button>
+      <button type="button" id="btnAbrirHistorico" class="btn-abrir-historico">🕓</button>
+    </div>
+  </div>
+
+</main>
+  </div>
+
+  <script>
+    const API_CHAT = "http://localhost:3000/chat";
+    let chatAtivo = false;
+    let conversaAtualId = null;
+    let mensagensConversaAtual = [];
+
+    const chatWelcome  = document.getElementById('chatWelcome');
+    const chatMessages = document.getElementById('chatMessages');
+    const inputBar     = document.getElementById('inputBar');
+    const micBtn       = document.getElementById('micBtn');
+
+    function ativarChat() {
+      if (!chatAtivo) {
+        chatAtivo = true;
+        chatWelcome.style.display  = 'none';
+        chatMessages.style.display = 'flex';
+      }
+    }
+
+    function adicionarMensagem(texto, tipo) {
+      ativarChat();
+
+      const linha = document.createElement('div');
+      linha.classList.add('linha-mensagem', tipo);
+
+      if (tipo === 'ia') {
+        const avatar = document.createElement('img');
+        avatar.src = '../imgs/chat despolariza.PNG';
+        avatar.alt = 'IA';
+        avatar.classList.add('avatar-ia');
+        linha.appendChild(avatar);
+       }
+
+      const balao = document.createElement('div');
+      balao.classList.add('mensagem', tipo);
+      balao.innerText = texto;
+      linha.appendChild(balao);
+
+      chatMessages.appendChild(linha);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function respostaIA(pergunta) {
+      pergunta = pergunta.toLowerCase();
+      if (pergunta.includes('fake news'))
+        return 'Fake News são informações falsas divulgadas como verdadeiras. Sempre verifique a fonte antes de compartilhar!';
+      if (pergunta.includes('polarização') || pergunta.includes('polarizacao'))
+        return 'Polarização política é a divisão extrema de opiniões em grupos opostos. O Despolariza! ajuda a entender diferentes perspectivas.';
+      if (pergunta.includes('identificar'))
+        return 'Para identificar desinformação: verifique fontes confiáveis, compare com outros veículos e cheque a data da publicação.';
+      if (pergunta.includes('dúvidas') || pergunta.includes('duvidas'))
+        return 'Pode perguntar! Estou aqui para tirar suas dúvidas sobre política, fake news e polarização.';
+      if (pergunta.includes('comprovações') || pergunta.includes('comprovacoes'))
+        return 'Para comprovar informações, recomendo fontes como Agência Lupa, Aos Fatos e G1 Fato ou Fake.';
+      if (pergunta.includes('argumentos'))
+        return 'Bons argumentos se baseiam em fatos verificáveis. Evite falácias e sempre cite fontes confiáveis!';
+      return 'Desculpe, ainda estou aprendendo sobre esse assunto. Tente perguntar sobre fake news, polarização ou como identificar desinformação.';
+    }
+
+   async function salvarNaConversa(mensagem, resposta) {
+    mensagensConversaAtual.push({ tipo: 'usuario', texto: mensagem });
+    mensagensConversaAtual.push({ tipo: 'ia', texto: resposta });
+
+    try {
+      if (conversaAtualId === null) {
+        // primeira mensagem desta conversa: cria o item
+        const r = await fetch(API_CHAT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            titulo: mensagem,
+            data: new Date().toISOString(),
+            mensagens: mensagensConversaAtual
+          })
+        });
+        const criado = await r.json();
+        conversaAtualId = criado.id;
+      } else {
+        // conversa já existe: só atualiza a lista de mensagens
+        await fetch(`${API_CHAT}/${conversaAtualId}`, {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ mensagens: mensagensConversaAtual })
+        });
+      }
+      carregarHistorico();
+    } catch {
+      console.warn("Não foi possível salvar a conversa. O servidor está rodando?");
+    }
+  }
+
+  async function carregarHistorico() {
+    try {
+      const r = await fetch(API_CHAT);
+      if (!r.ok) throw new Error();
+      const lista = await r.json();
+
+      const listaHistorico = document.querySelector(".sidebar-history");
+      listaHistorico.innerHTML = "";
+
+      [...lista].reverse().forEach((item) => {
+        const li = document.createElement("li");
+        li.style.display = "flex";
+        li.style.alignItems = "center";
+        li.style.justifyContent = "space-between";
+
+        const a = document.createElement("a");
+        a.href = "#";
+        a.style.flex = "1";
+        a.textContent = item.titulo.length > 28
+          ? item.titulo.slice(0, 28) + "…"
+          : item.titulo;
+        a.onclick = (e) => { e.preventDefault(); abrirConversa(item); };
+
+        const btnExcluir = document.createElement("button");
+        btnExcluir.type = "button";
+        btnExcluir.innerHTML = "🗑";
+        btnExcluir.title = "Excluir conversa";
+        btnExcluir.classList.add("btn-excluir-historico");
+        btnExcluir.onclick = (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          excluirConversa(item.id);
+        };
+
+        li.appendChild(a);
+        li.appendChild(btnExcluir);
+        listaHistorico.appendChild(li);
+      });
+    } catch {
+      console.warn("Não foi possível carregar o histórico.");
+    }
+  }
+
+  async function excluirConversa(id) {
+    const confirmou = confirm("Tem certeza que deseja excluir esta conversa?");
+    if (!confirmou) return;
+
+    try {
+      await fetch(`${API_CHAT}/${id}`, { method: "DELETE" });
+
+      if (conversaAtualId === id) {
+        novaConversa();
+      }
+
+      carregarHistorico();
+    } catch {
+      console.warn("Não foi possível excluir a conversa.");
+    }
+  }
+
+  function enviarMensagem() {
+      const texto = inputBar.value.trim();
+      if (!texto) return;
+      adicionarMensagem(texto, 'usuario');
+      inputBar.value = '';
+      setTimeout(() => {
+        const resposta = respostaIA(texto);
+        adicionarMensagem(resposta, 'ia');
+        salvarNaConversa(texto, resposta);
+      }, 800);
+  } 
+
+  function enviarChip(texto) {
+    adicionarMensagem(texto, 'usuario');
+    setTimeout(() => {
+      const resposta = respostaIA(texto);
+      adicionarMensagem(resposta, 'ia');
+      salvarNaConversa(texto, resposta);
+    }, 800);
+  }
+
+    inputBar.addEventListener('keydown', e => { if (e.key === 'Enter') enviarMensagem(); });
+
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    function iniciarReconhecimento() {
+      if (!SpeechRecognition) {
+        adicionarMensagem('⚠️ Seu navegador não suporta reconhecimento de voz. Use o Chrome.', 'ia');
+        return;
+      }
+      const rec = new SpeechRecognition();
+      rec.lang = 'pt-BR';
+      rec.interimResults = false;
+
+      micBtn.classList.add('mic-ativo');
+      micBtn.disabled = true;
+
+      rec.start();
+
+      rec.onresult = function(event) {
+        const texto = event.results[0][0].transcript;
+        inputBar.value = texto;       
+        micBtn.classList.remove('mic-ativo');
+        micBtn.disabled = false;
+        enviarMensagem();             
+      };
+
+      rec.onerror = function() {
+        micBtn.classList.remove('mic-ativo');
+        micBtn.disabled = false;
+        adicionarMensagem('⚠️ Não consegui entender. Tente novamente.', 'ia');
+      };
+
+      rec.onend = function() {
+        micBtn.classList.remove('mic-ativo');
+        micBtn.disabled = false;
+      };
+    }
+
+    function abrirConversa(item) {
+    conversaAtualId = item.id;
+    mensagensConversaAtual = [...item.mensagens];
+
+    chatMessages.innerHTML = "";
+    chatAtivo = true;
+    chatWelcome.style.display  = 'none';
+    chatMessages.style.display = 'flex';
+    asideEl.classList.remove('aside-aberta');
+
+    item.mensagens.forEach(m => {
+      const linha = document.createElement('div');
+      linha.classList.add('linha-mensagem', m.tipo);
+
+      if (m.tipo === 'ia') {
+        const avatar = document.createElement('img');
+        avatar.src = '../imgs/chat despolariza.PNG';
+        avatar.alt = 'IA';
+        avatar.classList.add('avatar-ia');
+        linha.appendChild(avatar);
+      }
+
+      const balao = document.createElement('div');
+      balao.classList.add('mensagem', m.tipo);
+      balao.innerText = m.texto;
+      linha.appendChild(balao);
+
+      chatMessages.appendChild(linha);
+    });
+
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  function novaConversa() {
+    conversaAtualId = null;
+    mensagensConversaAtual = [];
+    chatAtivo = false;
+    chatMessages.innerHTML = "";
+    chatMessages.style.display = 'none';
+    chatWelcome.style.display = 'flex';
+  }
+
+  const btnAbrirHistorico = document.getElementById('btnAbrirHistorico');
+  const asideEl = document.querySelector('aside');
+
+  btnAbrirHistorico.addEventListener('click', () => {
+    asideEl.classList.toggle('aside-aberta');
+  });
+
+  
+
+    carregarHistorico();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

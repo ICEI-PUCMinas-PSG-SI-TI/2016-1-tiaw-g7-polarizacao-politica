@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre - Despolariza!</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+        <nav class="navbar navbar-expand-lg fixed-top cabecalho">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../imgs/despolariza.png" alt="Logo" width="200px" height="50%" class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link cabecalhocor" href="../index.html"><strong>Início</strong></a>
+                        <a class="nav-link cabecalhocor" href="../Aprofundamento - Marcelo/Aprofundamento.html"><strong>Aprofundamento</strong></a>
+                        <div class="nav-item dropdown">
+                            <a class="nav-link active cabecalhocor dropdown-toggle" aria-current="page" href="#" id="fakeNewsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <strong>Verificadores</strong>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="fakeNewsDropdown">
+                                <li><a class="dropdown-item" href="../Fake News - André/FakeNews.html">Fake News</a></li>
+                                <li><a class="dropdown-item" href="../Imparcialidade - André/Imparcialidade.html">Imparcialidade</a></li>
+                                
+                            </ul>
+                        </div>
+                        <a class="nav-link cabecalhocor" href="../Lados Politicos - Rubens/Politica.html"><strong>Lados Políticos</strong></a>
+                        <a class="nav-link cabecalhocor" href="../Chat - Guilherme/chat.html"><strong>Chat</strong></a>
+                        <a class="nav-link cabecalhocor" href="#"><strong>Sobre</strong></a>
+                    </div>
+                    <form class="d-flex ms-5" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search"/>
+                        <button class="btn btn-outline-primary" type="submit">Procurar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+  <!-- ── Conteúdo principal ────────────────────────────── -->
+  <main class="page-wrapper">
+      <h1 class="titulo entrada-suave">Sobre o Despolariza!</h1>
+<div class="paragrafo">
+  <p>O Despolariza! é uma iniciativa educativa criada para ajudar as pessoas a compreenderem melhor o fenômeno da polarização política e seus efeitos na sociedade. A proposta nasce da preocupação com um cenário onde o debate de ideias tem sido cada vez mais substituído por disputas identitárias, dificultando o diálogo e o entendimento mútuo.</p>
+</div>
+<div class="paragrafo">
+  <p>Por meio de conteúdos aprofundados, verificadores de fake news e de imparcialidade, um chat interativo e dados sobre o espectro político brasileiro, o projeto busca oferecer ferramentas práticas para que cada pessoa possa formar opiniões mais bem informadas, identificar desinformação com mais facilidade e compreender diferentes perspectivas políticas sem perder o senso crítico.</p>
+</div>
+<div class="paragrafo">
+  <p>Acreditamos que uma sociedade mais informada é também uma sociedade mais capaz de dialogar, divergir com respeito e construir soluções coletivas e é esse o compromisso que guia cada parte deste site.</p>
+</div>
+  <br>
+    <!-- ── Avaliação ─────────────────────────────────────── -->
+    <div class="card-section" id="avaliacao-section">
+      <h2 class="section-title">Avalie este site</h2>
+
+      <!-- Média atual -->
+      <div id="media-display" class="mb-3 d-none">
+        <div>
+          <div class="big-score" id="media-valor">—</div>
+          <div style="font-size:.72rem;font-weight:400;color:#888">média geral</div>
+        </div>
+        <div>
+          <div class="stars-mini" id="media-stars"></div>
+          <div style="font-size:.72rem;font-weight:400;color:#888" id="media-count"></div>
+        </div>
+      </div>
+
+      <!-- Formulário de nota -->
+      <p class="text-center mb-1" style="font-size:.9rem;color:#666">
+        Clique nas estrelas para dar sua nota:
+      </p>
+      <div class="stars-row" id="stars-row" role="group" aria-label="Avaliação de 1 a 5 estrelas">
+        <span class="star" data-val="1" title="1 — Péssimo">★</span>
+        <span class="star" data-val="2" title="2 — Ruim">★</span>
+        <span class="star" data-val="3" title="3 — Regular">★</span>
+        <span class="star" data-val="4" title="4 — Bom">★</span>
+        <span class="star" data-val="5" title="5 — Excelente">★</span>
+      </div>
+      <p id="nota-label">Passe o mouse para avaliar</p>
+
+      <textarea id="comentario" placeholder="Deixe um comentário (opcional)…" maxlength="300"></textarea>
+      <div class="d-flex justify-content-end mt-2">
+        <span style="font-size:.72rem;color:#bbb" id="char-count">0/300</span>
+      </div>
+
+      <div class="d-flex justify-content-center mt-3">
+        <button class="btn-avaliar" id="btn-enviar" disabled>Enviar Avaliação</button>
+      </div>
+
+      <!-- Histórico -->
+      <hr class="mt-4 mb-2" style="border-color:var(--borda)" />
+      <h6 style="color:var(--azul);font-weight:600;font-size:.9rem">
+        <i class="bi bi-chat-quote me-1"></i> Avaliações recentes:
+      </h6>
+      <div id="lista-avaliacoes">
+        <p style="font-size:.85rem;color:#bbb;text-align:center;padding:1rem 0" id="empty-msg">
+          Ainda sem avaliações. Seja o primeiro!
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Toast -->
+  <div id="toast-avaliacao">
+    <div id="toast-el" class="toast align-items-center text-white border-0" role="alert">
+      <div class="d-flex">
+        <div class="toast-body" id="toast-msg">Avaliação enviada!</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+      </div>
+    </div>
+  </div>
+  <footer class="rodape">
+    <div class="rodape-conteudo">
+        <p><strong>Despolariza</strong> — Ensinando sobre polarização</p>
+        <p>© 2026 Despolariza. Todos os direitos reservados.</p>
+        <div class="rodape-links">
+            <a href="#" class="rodape-links">Instagram</a>
+            <a href="#" class="rodape-links">Facebook</a>
+            <a href="#" class="rodape-links">Twitter</a>
+        </div>
+    </div>
+  </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- App JS -->
+  <script src="main.js"></script>
+
+</body>
+</html>

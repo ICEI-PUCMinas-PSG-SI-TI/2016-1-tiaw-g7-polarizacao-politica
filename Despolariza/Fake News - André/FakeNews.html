@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Verificador de Fake News - Despolariza</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top cabecalho">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../imgs/despolariza.png" alt="Logo" width="200px" height="50%" class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link cabecalhocor" href="../index.html"><strong>Início</strong></a>
+                        <a class="nav-link cabecalhocor" href="../Aprofundamento - Marcelo/Aprofundamento.html"><strong>Aprofundamento</strong></a>
+                        <div class="nav-item dropdown">
+                            <a class="nav-link active cabecalhocor dropdown-toggle" aria-current="page" href="#" id="fakeNewsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <strong>Verificadores</strong>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="fakeNewsDropdown">
+                                <li><a class="dropdown-item" href="FakeNews.html">Fake News</a></li>
+                                <li><a class="dropdown-item" href="../Imparcialidade - André/Imparcialidade.html">Imparcialidade</a></li>
+                                
+                            </ul>
+                        </div>
+                        <a class="nav-link cabecalhocor" href="../Lados Politicos - Rubens/Politica.html"><strong>Lados Políticos</strong></a>
+                        <a class="nav-link cabecalhocor" href="../Chat - Guilherme/chat.html"><strong>Chat</strong></a>
+                        <a class="nav-link cabecalhocor" href="../Sobre - Rubens/Sobre.html"><strong>Sobre</strong></a>
+                    </div>
+                    <form class="d-flex ms-5" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search"/>
+                        <button class="btn btn-outline-primary" type="submit">Procurar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1 class="titulo entrada-suave">Fake News:</h1>
+        <div class="paragrafo">
+          <p>Saber o que é verdade na internet hoje em dia exige mais do que apenas um olhar atento, exige um método. Para não ser enganado por notícias falsas, você precisa tratar a informação com o mesmo cuidado que trata suas finanças ou seu trabalho. Abaixo segue 3 conselhos válidos para não cair em fake news:</p>
+        </div>
+         <div class="paragrafo">
+          <p><strong>Triagem de Temporalidade:</strong> Confirme a data de publicação. O uso de dados arcaicos para interpretar eventos atuais é uma técnica comum de desinformação.</p>
+        </div>
+         <div class="paragrafo">
+          <p><strong>Triagem de dados:</strong> Aplique o princípio da redundância. Uma informação só adquire o status de "fato" após a confirmação por múltiplos canais independentes e idôneos.</p>
+        </div>
+        <div class="paragrafo">
+          <p><strong>Análise Semântica:</strong> Descarte conteúdos com viés cognitivo evidente, adjetivação excessiva ou apelo emocional. A informação técnica preza pela neutralidade e objetividade.</p>
+        </div>
+        <br>
+        <h1 class="titulo2">Verificador de fake news:</h1>
+        <div class="caixa">
+          <p><strong>Copie e cole ou escreva aqui o texto que você suspeita ser falso.</strong></p>
+          <p><strong>O texto deve estar completo!</strong></p>
+          <div class="espaco">
+            <textarea id="textoNoticia"></textarea>
+          </div>
+          <div class="botoes-acao">
+            <button type="button" id="btnEnviar"><strong>Enviar</strong></button>
+            <button type="button" id="btnHistorico">📋 Ver histórico</button>
+          </div>
+          <div id="historico" style="display:none;">
+          <div id="lista-historico"></div>
+          </div>
+        </div>
+         <div id="resposta">
+          <p>Sua resposta sairá aqui</p>
+         </div>
+      </main>
+    <footer class="rodape">
+    <div class="rodape-conteudo">
+        <p><strong>Despolariza</strong> — Ensinando sobre polarização</p>
+        <p>© 2026 Despolariza. Todos os direitos reservados.</p>
+        <div class="rodape-links">
+            <a href="#" class="rodape-links">Instagram</a>
+            <a href="#" class="rodape-links">Facebook</a>
+            <a href="#" class="rodape-links">Twitter</a>
+        </div>
+    </div>
+ 
+  </footer>
+    <script type="text/JavaScript" src="script.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
