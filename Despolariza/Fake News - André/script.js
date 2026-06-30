@@ -97,23 +97,10 @@ document.addEventListener('DOMContentLoaded', () =>
 
         resposta.innerHTML = '<p>Fazendo a análise do texto...</p>';
 
-        const chave = 'AQ.Ab8RN6LiNDQl0s5gW-2fzaaQX4Q8nmiqrKBKoA7_EuWheIrQQA';
-
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${chave}`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                contents: [{
-                    parts: [{
-                        text: `Você é um detector de fake news e desinformação. Analise o seguinte texto em português, independente do tamanho. Textos curtos também devem ser analisados normalmente. Não tente confirmar se o fato aconteceu, pois você pode não conhecer eventos recentes. Analise as características do texto: linguagem, coerência e dados verificáveis.
-                            Responda exatamente neste formato:
-                            COMPLETO: SIM (considere SIM para qualquer texto com sentido completo, mesmo que curto)
-                            VEREDICTO: FALSO ou VERDADEIRO
-                            EXPLICACAO: explicação resumida dos motivos
-                            Texto: ${texto}`        
-                    }]
-                }]
-            })
+        const response = await fetch('https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/api/fake-news', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ texto })
         });
 
         const data = await response.json();

@@ -194,32 +194,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         resposta.innerHTML = '<p class="loading-texto">Analisando imparcialidade do texto...</p>';
 
-        const chave = 'AQ.Ab8RN6K0y3O-vk3nU_IwQPU7ncHxieijYAesiEqS0vf9BkPmBw';
-
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${chave}`, {
+        const response = await fetch('https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/api/imparcialidade', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                contents: [{
-                    parts: [{
-                        text: `Você é um analisador de imparcialidade textual.
-                            REGRAS OBRIGATÓRIAS:
-                            - Se o texto estiver claramente cortado ou incompleto no meio de uma palavra ou frase, responda COMPLETO: NAO
-                            - Se o conteúdo não for texto analisável (código, dados, listas aleatórias, etc), responda COMPLETO: INVALIDO
-                            - Caso contrário, responda COMPLETO: SIM
-
-                            Avalie o nível de tendenciosidade com base em: linguagem emocional, ausência de fontes, visão unilateral, apelos emocionais e adjetivação excessiva.
-
-                            Responda EXATAMENTE neste formato, sem texto adicional:
-                            COMPLETO: SIM, NAO ou INVALIDO
-                            TENDENCIOSIDADE: número de 0 a 100
-                            EXPLICACAO: explicação resumida em 2 a 4 frases
-
-                        Texto: ${texto}`
-                                            }]
-                                        }]
-                                    })
-                                });
+            body: JSON.stringify({ texto })
+        });
 
         const data = await response.json();
 
