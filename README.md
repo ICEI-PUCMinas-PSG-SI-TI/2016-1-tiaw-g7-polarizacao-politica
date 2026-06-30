@@ -54,6 +54,7 @@ Aprenda Markdown e use-o para documentar o projeto
 
 > [Suporte Github](https://help.github.com/pt/github/writing-on-github/getting-started-with-writing-and-formatting-on-github)
 
+**Metodologia**
 
 Ferramentas
 
