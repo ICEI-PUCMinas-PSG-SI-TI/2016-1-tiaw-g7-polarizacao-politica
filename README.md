@@ -96,6 +96,7 @@ Web Speech API (API de reconhecimento de voz do navegador) — adicionada na Spr
 
 
 
+
 Karolina Carvalho Soares Martins - Home-Page com Notícias e Sistema de Comentários
 Justificativa
 
