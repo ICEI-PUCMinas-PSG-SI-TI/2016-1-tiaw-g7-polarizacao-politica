@@ -156,3 +156,36 @@ Bootstrap — framework CSS integrado na Sprint 1 para a construção rápida do
 JSON Server — utilizado para simular uma API REST (dados.json) responsável por armazenar e servir os vídeos, notícias, comentários e, posteriormente, o podcast. Escolhido por permitir prototipar rapidamente o backend do projeto sem a necessidade de configurar um servidor real.
 API de Embed do YouTube (iframe) — integrada na Sprint 1 para exibir os vídeos educativos sobre polarização diretamente na página, incluindo a funcionalidade de miniplayer. Escolhida por ser nativa e gratuita, dispensando bibliotecas adicionais.
 
+
+**André Henrique Braga Dias — Verificadores de Fake News e Imparcialidade**
+
+**Justificativa**
+
+**SPRINT 1**
+
+**Combate direto à desinformação:** A página de Verificador de Fake News oferece ao usuário uma ferramenta prática para analisar textos suspeitos, apresentando orientações sobre como identificar desinformação (triagem de temporalidade, triagem de dados e análise semântica) antes mesmo de submeter o texto para verificação. Essa abordagem educativa prepara o usuário para desenvolver senso crítico próprio, não apenas dependendo da ferramenta.
+Persistência e rastreabilidade das análises: A funcionalidade de histórico, conectada ao JSON Server, permite que o usuário consulte análises anteriores e acompanhe um padrão de verificações realizadas ao longo do tempo, tornando a ferramenta não apenas pontual, mas contínua no combate à desinformação.
+
+**SPRINT 2**
+
+**Análise de imparcialidade com inteligência artificial:** A adição do Verificador de Imparcialidade, integrado à API do Google Gemini, eleva o nível de sofisticação da ferramenta ao oferecer uma análise semântica automatizada que detecta linguagem tendenciosa, ausência de fontes e visão unilateral em qualquer texto submetido pelo usuário — funcionalidades que seriam inviáveis sem o uso de IA.
+Visualização clara dos resultados: O medidor circular de porcentagem (gauge), animado com transição suave, transforma um resultado numérico abstrato em uma representação visual imediata e intuitiva, permitindo que o usuário compreenda rapidamente o grau de imparcialidade do texto analisado sem precisar interpretar números brutos.
+
+**Editor de Código**
+Visual Studio Code (VS Code) — utilizado para escrever e organizar todo o código do projeto (HTML, CSS e JavaScript). Escolhido pela leveza, extensões úteis como Live Server para visualização em tempo real, e por ser amplamente adotado no desenvolvimento web, facilitando o trabalho colaborativo entre os membros do grupo.
+
+**Ferramentas de Comunicação**
+Discord — usado para comunicação entre os integrantes do grupo, alinhamento de tarefas, dúvidas rápidas e organização das sprints. Escolhido por permitir conversas em tempo real, criação de canais separados por assunto e fácil compartilhamento de arquivos e links durante o desenvolvimento.
+
+**Ferramentas de Diagramação/Prototipação**
+Figma — utilizado para a criação do wireframe das páginas de verificação e da estrutura do card de resultados. Escolhido por ser uma ferramenta colaborativa online que permite que vários membros visualizem e comentem o protótipo antes da implementação, evitando retrabalho no código.
+
+**Plataformas de Hospedagem e Controle de Versão**
+GitHub — utilizado para versionamento do código e hospedagem do repositório do projeto, permitindo o trabalho colaborativo entre os membros do grupo, controle de branches e histórico de alterações.
+
+**APIs e Recursos Externos**
+Bootstrap — framework CSS integrado para a construção rápida do layout responsivo (navbar, card do verificador e caixa de resultados), garantindo consistência visual e compatibilidade com diferentes tamanhos de tela sem a necessidade de escrever CSS do zero para componentes complexos.
+JSON Server — utilizado para simular uma API REST responsável por armazenar e servir o histórico de verificações de fake news e os resultados de imparcialidade. Escolhido por permitir prototipar rapidamente o backend do projeto sem a necessidade de configurar um servidor real.
+Google Gemini API (Generative Language API) — integrada na Sprint 2 para realizar a análise semântica automatizada dos textos submetidos pelo usuário, identificando linguagem tendenciosa, ausência de fontes e visão unilateral. Escolhida por oferecer capacidade de processamento de linguagem natural de alta qualidade de forma acessível, sem necessidade de treinar um modelo próprio.
+
+
