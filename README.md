@@ -123,7 +123,7 @@ GitHub — utilizado para versionamento do código da Home-Page dentro do reposi
 JSON Server — utilizado para simular um backend local (localhost:3000), persistindo notícias, comentários e avaliações sem a necessidade de um banco de dados real. Escolhido por ser leve, rápido de configurar e ideal para prototipação em projetos acadêmicos com prazo curto.
 
 
-**Marcelo HSS - Página Inicial e Conscientização sobre Polarização Política**
+**Marcelo Henrique Soares Silva - Página Inicial e Conscientização sobre Polarização Política**
 
 **Justificativa**
 
