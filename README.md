@@ -188,28 +188,28 @@ Bootstrap — framework CSS integrado para a construção rápida do layout resp
 JSON Server — utilizado para simular uma API REST responsável por armazenar e servir o histórico de verificações de fake news e os resultados de imparcialidade. Escolhido por permitir prototipar rapidamente o backend do projeto sem a necessidade de configurar um servidor real.
 Google Gemini API (Generative Language API) — integrada na Sprint 2 para realizar a análise semântica automatizada dos textos submetidos pelo usuário, identificando linguagem tendenciosa, ausência de fontes e visão unilateral. Escolhida por oferecer capacidade de processamento de linguagem natural de alta qualidade de forma acessível, sem necessidade de treinar um modelo próprio.
 
-Rubens de Moura Arquina Oliveira — Página "Sobre" e Sistema de Avaliação do Site
+**Rubens de Moura Arquina Oliveira — Página "Sobre" e Sistema de Avaliação do Site**
 
 Justificativa
 
-SPRINT 1
+**SPRINT 1**
 
-Conexão direta com o tema: a página "Sobre" apresenta de forma clara a missão do Despolariza e o princípio de Neutralidade Informativa que fundamenta a ferramenta — multiperspectivismo, prioridade ao dado bruto e ausência de filtros de opinião —, dando transparência ao usuário sobre como o conteúdo é produzido antes mesmo de ele formar uma opinião sobre o restante do site.
+**Conexão direta com o tema:** a página "Sobre" apresenta de forma clara a missão do Despolariza e o princípio de Neutralidade Informativa que fundamenta a ferramenta — multiperspectivismo, prioridade ao dado bruto e ausência de filtros de opinião —, dando transparência ao usuário sobre como o conteúdo é produzido antes mesmo de ele formar uma opinião sobre o restante do site.
 
-Transparência e confiança do usuário: a adição de um banner de detecção de ambiente (navegador, sistema operacional, idioma, tema do sistema, resolução de tela, tipo de conexão e status da API) torna visível, em tempo real, como a aplicação está rodando para quem a acessa. Esse tipo de informação aproxima o usuário do funcionamento técnico do site e reforça a postura de transparência que o projeto defende — afinal, um site que prega neutralidade e clareza também deve ser claro sobre sua própria infraestrutura.
+**Transparência e confiança do usuário:** a adição de um banner de detecção de ambiente (navegador, sistema operacional, idioma, tema do sistema, resolução de tela, tipo de conexão e status da API) torna visível, em tempo real, como a aplicação está rodando para quem a acessa. Esse tipo de informação aproxima o usuário do funcionamento técnico do site e reforça a postura de transparência que o projeto defende — afinal, um site que prega neutralidade e clareza também deve ser claro sobre sua própria infraestrutura.
 
-SPRINT 2
+**SPRINT 2**
 
-Engajamento e participação do usuário: a implementação do sistema de avaliação por estrelas (1 a 5), com rótulos descritivos ("Péssimo", "Regular", "Excelente"), campo de comentário com contador de caracteres e feedback visual (toast de confirmação), transforma a página "Sobre" em um canal direto de escuta do usuário, permitindo que ele opine sobre a experiência do site e não apenas sobre o conteúdo das notícias.
+**Engajamento e participação do usuário:** a implementação do sistema de avaliação por estrelas (1 a 5), com rótulos descritivos ("Péssimo", "Regular", "Excelente"), campo de comentário com contador de caracteres e feedback visual (toast de confirmação), transforma a página "Sobre" em um canal direto de escuta do usuário, permitindo que ele opine sobre a experiência do site e não apenas sobre o conteúdo das notícias.
 
-Persistência e confiabilidade dos dados: a criação de um servidor próprio (server.js), que envolve o json-server e adiciona automaticamente um timestamp a cada avaliação enviada, garante que as opiniões dos usuários sejam armazenadas de forma confiável e datada, permitindo exibir um histórico das avaliações mais recentes e uma média geral atualizada em tempo real — o que dá ao usuário a sensação de que sua participação realmente importa e é contabilizada.
+**Persistência e confiabilidade dos dados:** a criação de um servidor próprio (server.js), que envolve o json-server e adiciona automaticamente um timestamp a cada avaliação enviada, garante que as opiniões dos usuários sejam armazenadas de forma confiável e datada, permitindo exibir um histórico das avaliações mais recentes e uma média geral atualizada em tempo real — o que dá ao usuário a sensação de que sua participação realmente importa e é contabilizada.
 
 Ferramentas
 
-Editor de Código
+**Editor de Código**
 Visual Studio Code (VS Code) — utilizado para escrever e organizar todo o código da página (HTML, CSS e JavaScript). O projeto foi configurado com um arquivo despolariza.code-workspace próprio, já com extensões recomendadas (Live Server, Prettier, ESLint, Auto Rename Tag, Path Intellisense) e tarefas de build (npm install e npm start) pré-configuradas, agilizando a configuração do ambiente para qualquer integrante que abrisse o projeto.
 
-Plataformas e Recursos Externos
+**Plataformas e Recursos Externos**
 Bootstrap 5 + Bootstrap Icons — utilizados para a construção da navbar, dos cards de conteúdo e dos ícones do banner de ambiente, garantindo um layout responsivo e visualmente consistente sem necessidade de escrever CSS do zero para componentes complexos.
 
 Google Fonts (Sora e DM Serif Display) — integradas para diferenciar visualmente títulos e texto corrido, reforçando a identidade visual do Despolariza.
