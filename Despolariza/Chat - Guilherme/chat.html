@@ -85,266 +85,267 @@
 
   <script>
     const API_CHAT = "http://localhost:3000/chat";
-    let chatAtivo = false;
-    let conversaAtualId = null;
-    let mensagensConversaAtual = [];
+let chatAtivo = false;
+let conversaAtualId = null;
+let mensagensConversaAtual = [];
 
-    const chatWelcome  = document.getElementById('chatWelcome');
-    const chatMessages = document.getElementById('chatMessages');
-    const inputBar     = document.getElementById('inputBar');
-    const micBtn       = document.getElementById('micBtn');
+const chatWelcome  = document.getElementById('chatWelcome');
+const chatMessages = document.getElementById('chatMessages');
+const inputBar     = document.getElementById('inputBar');
+const micBtn       = document.getElementById('micBtn');
 
-    function ativarChat() {
-      if (!chatAtivo) {
-        chatAtivo = true;
-        chatWelcome.style.display  = 'none';
-        chatMessages.style.display = 'flex';
-      }
-    }
-
-    function adicionarMensagem(texto, tipo) {
-      ativarChat();
-
-      const linha = document.createElement('div');
-      linha.classList.add('linha-mensagem', tipo);
-
-      if (tipo === 'ia') {
-        const avatar = document.createElement('img');
-        avatar.src = '../imgs/chat despolariza.PNG';
-        avatar.alt = 'IA';
-        avatar.classList.add('avatar-ia');
-        linha.appendChild(avatar);
-       }
-
-      const balao = document.createElement('div');
-      balao.classList.add('mensagem', tipo);
-      balao.innerText = texto;
-      linha.appendChild(balao);
-
-      chatMessages.appendChild(linha);
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
-
-    function respostaIA(pergunta) {
-      pergunta = pergunta.toLowerCase();
-      if (pergunta.includes('fake news'))
-        return 'Fake News são informações falsas divulgadas como verdadeiras. Sempre verifique a fonte antes de compartilhar!';
-      if (pergunta.includes('polarização') || pergunta.includes('polarizacao'))
-        return 'Polarização política é a divisão extrema de opiniões em grupos opostos. O Despolariza! ajuda a entender diferentes perspectivas.';
-      if (pergunta.includes('identificar'))
-        return 'Para identificar desinformação: verifique fontes confiáveis, compare com outros veículos e cheque a data da publicação.';
-      if (pergunta.includes('dúvidas') || pergunta.includes('duvidas'))
-        return 'Pode perguntar! Estou aqui para tirar suas dúvidas sobre política, fake news e polarização.';
-      if (pergunta.includes('comprovações') || pergunta.includes('comprovacoes'))
-        return 'Para comprovar informações, recomendo fontes como Agência Lupa, Aos Fatos e G1 Fato ou Fake.';
-      if (pergunta.includes('argumentos'))
-        return 'Bons argumentos se baseiam em fatos verificáveis. Evite falácias e sempre cite fontes confiáveis!';
-      return 'Desculpe, ainda estou aprendendo sobre esse assunto. Tente perguntar sobre fake news, polarização ou como identificar desinformação.';
-    }
-
-   async function salvarNaConversa(mensagem, resposta) {
-    mensagensConversaAtual.push({ tipo: 'usuario', texto: mensagem });
-    mensagensConversaAtual.push({ tipo: 'ia', texto: resposta });
-
-    try {
-      if (conversaAtualId === null) {
-        // primeira mensagem desta conversa: cria o item
-        const r = await fetch(API_CHAT, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            titulo: mensagem,
-            data: new Date().toISOString(),
-            mensagens: mensagensConversaAtual
-          })
-        });
-        const criado = await r.json();
-        conversaAtualId = criado.id;
-      } else {
-        // conversa já existe: só atualiza a lista de mensagens
-        await fetch(`${API_CHAT}/${conversaAtualId}`, {
-          method: "PATCH",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ mensagens: mensagensConversaAtual })
-        });
-      }
-      carregarHistorico();
-    } catch {
-      console.warn("Não foi possível salvar a conversa. O servidor está rodando?");
-    }
-  }
-
-  async function carregarHistorico() {
-    try {
-      const r = await fetch(API_CHAT);
-      if (!r.ok) throw new Error();
-      const lista = await r.json();
-
-      const listaHistorico = document.querySelector(".sidebar-history");
-      listaHistorico.innerHTML = "";
-
-      [...lista].reverse().forEach((item) => {
-        const li = document.createElement("li");
-        li.style.display = "flex";
-        li.style.alignItems = "center";
-        li.style.justifyContent = "space-between";
-
-        const a = document.createElement("a");
-        a.href = "#";
-        a.style.flex = "1";
-        a.textContent = item.titulo.length > 28
-          ? item.titulo.slice(0, 28) + "…"
-          : item.titulo;
-        a.onclick = (e) => { e.preventDefault(); abrirConversa(item); };
-
-        const btnExcluir = document.createElement("button");
-        btnExcluir.type = "button";
-        btnExcluir.innerHTML = "🗑";
-        btnExcluir.title = "Excluir conversa";
-        btnExcluir.classList.add("btn-excluir-historico");
-        btnExcluir.onclick = (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          excluirConversa(item.id);
-        };
-
-        li.appendChild(a);
-        li.appendChild(btnExcluir);
-        listaHistorico.appendChild(li);
-      });
-    } catch {
-      console.warn("Não foi possível carregar o histórico.");
-    }
-  }
-
-  async function excluirConversa(id) {
-    const confirmou = confirm("Tem certeza que deseja excluir esta conversa?");
-    if (!confirmou) return;
-
-    try {
-      await fetch(`${API_CHAT}/${id}`, { method: "DELETE" });
-
-      if (conversaAtualId === id) {
-        novaConversa();
-      }
-
-      carregarHistorico();
-    } catch {
-      console.warn("Não foi possível excluir a conversa.");
-    }
-  }
-
-  function enviarMensagem() {
-      const texto = inputBar.value.trim();
-      if (!texto) return;
-      adicionarMensagem(texto, 'usuario');
-      inputBar.value = '';
-      setTimeout(() => {
-        const resposta = respostaIA(texto);
-        adicionarMensagem(resposta, 'ia');
-        salvarNaConversa(texto, resposta);
-      }, 800);
-  } 
-
-  function enviarChip(texto) {
-    adicionarMensagem(texto, 'usuario');
-    setTimeout(() => {
-      const resposta = respostaIA(texto);
-      adicionarMensagem(resposta, 'ia');
-      salvarNaConversa(texto, resposta);
-    }, 800);
-  }
-
-    inputBar.addEventListener('keydown', e => { if (e.key === 'Enter') enviarMensagem(); });
-
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-
-    function iniciarReconhecimento() {
-      if (!SpeechRecognition) {
-        adicionarMensagem('⚠️ Seu navegador não suporta reconhecimento de voz. Use o Chrome.', 'ia');
-        return;
-      }
-      const rec = new SpeechRecognition();
-      rec.lang = 'pt-BR';
-      rec.interimResults = false;
-
-      micBtn.classList.add('mic-ativo');
-      micBtn.disabled = true;
-
-      rec.start();
-
-      rec.onresult = function(event) {
-        const texto = event.results[0][0].transcript;
-        inputBar.value = texto;       
-        micBtn.classList.remove('mic-ativo');
-        micBtn.disabled = false;
-        enviarMensagem();             
-      };
-
-      rec.onerror = function() {
-        micBtn.classList.remove('mic-ativo');
-        micBtn.disabled = false;
-        adicionarMensagem('⚠️ Não consegui entender. Tente novamente.', 'ia');
-      };
-
-      rec.onend = function() {
-        micBtn.classList.remove('mic-ativo');
-        micBtn.disabled = false;
-      };
-    }
-
-    function abrirConversa(item) {
-    conversaAtualId = item.id;
-    mensagensConversaAtual = [...item.mensagens];
-
-    chatMessages.innerHTML = "";
+function ativarChat() {
+  if (!chatAtivo) {
     chatAtivo = true;
     chatWelcome.style.display  = 'none';
     chatMessages.style.display = 'flex';
-    asideEl.classList.remove('aside-aberta');
+  }
+}
 
-    item.mensagens.forEach(m => {
-      const linha = document.createElement('div');
-      linha.classList.add('linha-mensagem', m.tipo);
+function adicionarMensagem(texto, tipo) {
+  ativarChat();
 
-      if (m.tipo === 'ia') {
-        const avatar = document.createElement('img');
-        avatar.src = '../imgs/chat despolariza.PNG';
-        avatar.alt = 'IA';
-        avatar.classList.add('avatar-ia');
-        linha.appendChild(avatar);
-      }
+  const linha = document.createElement('div');
+  linha.classList.add('linha-mensagem', tipo);
 
-      const balao = document.createElement('div');
-      balao.classList.add('mensagem', m.tipo);
-      balao.innerText = m.texto;
-      linha.appendChild(balao);
-
-      chatMessages.appendChild(linha);
-    });
-
-    chatMessages.scrollTop = chatMessages.scrollHeight;
+  if (tipo === 'ia') {
+    const avatar = document.createElement('img');
+    avatar.src = '../imgs/chat despolariza.PNG';
+    avatar.alt = 'IA';
+    avatar.classList.add('avatar-ia');
+    linha.appendChild(avatar);
   }
 
-  function novaConversa() {
-    conversaAtualId = null;
-    mensagensConversaAtual = [];
-    chatAtivo = false;
-    chatMessages.innerHTML = "";
-    chatMessages.style.display = 'none';
-    chatWelcome.style.display = 'flex';
+  const balao = document.createElement('div');
+  balao.classList.add('mensagem', tipo);
+  balao.innerText = texto;
+  linha.appendChild(balao);
+
+  chatMessages.appendChild(linha);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+  return linha;
+}
+
+function mostrarDigitando() {
+  const linha = adicionarMensagem('...', 'ia');
+  linha.id = 'digitando';
+}
+
+function removerDigitando() {
+  const div = document.getElementById('digitando');
+  if (div) div.remove();
+}
+
+async function respostaIA(pergunta) {
+  mostrarDigitando();
+
+  const chave = 'AQ.Ab8RN6Idon592FpM47hqU4PLKFpeQvuXPNmQpZb5vHy-t1VxZA'; // sua chave do Gemini
+
+  try {
+    const response = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${chave}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [{
+            parts: [{
+              text: `Você é o assistente do site Despolariza!, um projeto que combate a polarização política através de informação equilibrada. Responda em português, de forma curta (no máximo 3 frases) e imparcial, ajudando o usuário com dúvidas sobre política, fake news, polarização e como identificar desinformação.
+
+        Pergunta do usuário: ${pergunta}`
+                    }]
+                  }]
+                })
+              }
+            );
+
+    const data = await response.json();
+    removerDigitando();
+
+    let texto = "Desculpe, não consegui responder agora.";
+    if (data.candidates && data.candidates[0] && data.candidates[0].content) {
+      texto = data.candidates[0].content.parts[0].text.trim();
+    }
+    return texto;
+  } catch (erro) {
+    removerDigitando();
+    console.error(erro);
+    return '⚠️ Erro ao falar com a IA. Verifique sua conexão.';
   }
+}
 
-  const btnAbrirHistorico = document.getElementById('btnAbrirHistorico');
-  const asideEl = document.querySelector('aside');
+async function salvarNaConversa(mensagem, resposta) {
+  mensagensConversaAtual.push({ tipo: 'usuario', texto: mensagem });
+  mensagensConversaAtual.push({ tipo: 'ia', texto: resposta });
 
-  btnAbrirHistorico.addEventListener('click', () => {
-    asideEl.classList.toggle('aside-aberta');
-  });
-
-  
-
+  try {
+    if (conversaAtualId === null) {
+      const r = await fetch(API_CHAT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          titulo: mensagem,
+          data: new Date().toISOString(),
+          mensagens: mensagensConversaAtual
+        })
+      });
+      const criado = await r.json();
+      conversaAtualId = criado.id;
+    } else {
+      await fetch(`${API_CHAT}/${conversaAtualId}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ mensagens: mensagensConversaAtual })
+      });
+    }
     carregarHistorico();
+  } catch {
+    console.warn("Não foi possível salvar a conversa. O servidor está rodando?");
+  }
+}
+
+async function carregarHistorico() {
+  try {
+    const r = await fetch(API_CHAT);
+    if (!r.ok) throw new Error();
+    const lista = await r.json();
+
+    const listaHistorico = document.querySelector(".sidebar-history");
+    listaHistorico.innerHTML = "";
+
+    [...lista].reverse().forEach((item) => {
+      const li = document.createElement("li");
+      li.style.display = "flex";
+      li.style.alignItems = "center";
+      li.style.justifyContent = "space-between";
+
+      const a = document.createElement("a");
+      a.href = "#";
+      a.style.flex = "1";
+      a.textContent = item.titulo.length > 28
+        ? item.titulo.slice(0, 28) + "…"
+        : item.titulo;
+      a.onclick = (e) => { e.preventDefault(); abrirConversa(item); };
+
+      const btnExcluir = document.createElement("button");
+      btnExcluir.type = "button";
+      btnExcluir.innerHTML = "🗑";
+      btnExcluir.title = "Excluir conversa";
+      btnExcluir.classList.add("btn-excluir-historico");
+      btnExcluir.onclick = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        excluirConversa(item.id);
+      };
+
+      li.appendChild(a);
+      li.appendChild(btnExcluir);
+      listaHistorico.appendChild(li);
+    });
+  } catch {
+    console.warn("Não foi possível carregar o histórico.");
+  }
+}
+
+async function excluirConversa(id) {
+  const confirmou = confirm("Tem certeza que deseja excluir esta conversa?");
+  if (!confirmou) return;
+
+  try {
+    await fetch(`${API_CHAT}/${id}`, { method: "DELETE" });
+    if (conversaAtualId === id) novaConversa();
+    carregarHistorico();
+  } catch {
+    console.warn("Não foi possível excluir a conversa.");
+  }
+}
+
+async function enviarMensagem() {
+  const texto = inputBar.value.trim();
+  if (!texto) return;
+  adicionarMensagem(texto, 'usuario');
+  inputBar.value = '';
+
+  const resposta = await respostaIA(texto);
+  adicionarMensagem(resposta, 'ia');
+  salvarNaConversa(texto, resposta);
+}
+
+async function enviarChip(texto) {
+  adicionarMensagem(texto, 'usuario');
+  const resposta = await respostaIA(texto);
+  adicionarMensagem(resposta, 'ia');
+  salvarNaConversa(texto, resposta);
+}
+
+inputBar.addEventListener('keydown', e => { if (e.key === 'Enter') enviarMensagem(); });
+
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+function iniciarReconhecimento() {
+  if (!SpeechRecognition) {
+    adicionarMensagem('⚠️ Seu navegador não suporta reconhecimento de voz. Use o Chrome.', 'ia');
+    return;
+  }
+  const rec = new SpeechRecognition();
+  rec.lang = 'pt-BR';
+  rec.interimResults = false;
+
+  micBtn.classList.add('mic-ativo');
+  micBtn.disabled = true;
+  rec.start();
+
+  rec.onresult = function(event) {
+    const texto = event.results[0][0].transcript;
+    inputBar.value = texto;
+    micBtn.classList.remove('mic-ativo');
+    micBtn.disabled = false;
+    enviarMensagem();
+  };
+
+  rec.onerror = function() {
+    micBtn.classList.remove('mic-ativo');
+    micBtn.disabled = false;
+    adicionarMensagem('⚠️ Não consegui entender. Tente novamente.', 'ia');
+  };
+
+  rec.onend = function() {
+    micBtn.classList.remove('mic-ativo');
+    micBtn.disabled = false;
+  };
+}
+
+function abrirConversa(item) {
+  conversaAtualId = item.id;
+  mensagensConversaAtual = [...item.mensagens];
+
+  chatMessages.innerHTML = "";
+  chatAtivo = true;
+  chatWelcome.style.display  = 'none';
+  chatMessages.style.display = 'flex';
+  asideEl.classList.remove('aside-aberta');
+
+  item.mensagens.forEach(m => adicionarMensagem(m.texto, m.tipo));
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function novaConversa() {
+  conversaAtualId = null;
+  mensagensConversaAtual = [];
+  chatAtivo = false;
+  chatMessages.innerHTML = "";
+  chatMessages.style.display = 'none';
+  chatWelcome.style.display = 'flex';
+}
+
+const btnAbrirHistorico = document.getElementById('btnAbrirHistorico');
+const asideEl = document.querySelector('aside');
+
+btnAbrirHistorico.addEventListener('click', () => {
+  asideEl.classList.toggle('aside-aberta');
+});
+
+carregarHistorico();
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () =>
 
         resposta.innerHTML = '<p>Fazendo a análise do texto...</p>';
 
-        const chave = 'AQ.Ab8RN6JaDVJimcf14K_cHc6y2eb9k5sl5CScLICMVI2QDZbliQ';
+        const chave = 'AQ.Ab8RN6LiNDQl0s5gW-2fzaaQX4Q8nmiqrKBKoA7_EuWheIrQQA';
 
         const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${chave}`, {
             method: 'POST',

@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         resposta.innerHTML = '<p class="loading-texto">Analisando imparcialidade do texto...</p>';
 
-        const chave = 'AQ.Ab8RN6IERTL00-RN3I24kHYvNCS_DjQdxwOS8MpJjy9vKW6NDw';
+        const chave = 'AQ.Ab8RN6K0y3O-vk3nU_IwQPU7ncHxieijYAesiEqS0vf9BkPmBw';
 
         const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${chave}`, {
             method: 'POST',
