@@ -63,27 +63,29 @@ Guilherme Matheus Araujo - Chat IA e Recohecimento de Voz
 **Justificativa** 
 
 **SPRINT 1**
-Conexão direta com o tema: um chat de IA permite simular um "mediador" neutro, capaz de apresentar diferentes pontos de vista sobre temas polarizados sem tomar partido, ajudando o usuário a refletir em vez de reforçar uma bolha de opinião.
 
-Engajamento do usuário: uma interface conversacional é mais convidativa e interativa do que um site estático com textos informativos, aumentando o tempo de uso e a chance de o usuário realmente refletir sobre o conteúdo.
+**Conexão direta com o tema:** um chat de IA permite simular um "mediador" neutro, capaz de apresentar diferentes pontos de vista sobre temas polarizados sem tomar partido, ajudando o usuário a refletir em vez de reforçar uma bolha de opinião.
+
+**Engajamento do usuário:** uma interface conversacional é mais convidativa e interativa do que um site estático com textos informativos, aumentando o tempo de uso e a chance de o usuário realmente refletir sobre o conteúdo.
 
 **SPRINT 2**
-Acessibilidade: permite que pessoas com dificuldade de digitação, idosos ou usuários com deficiência visual/motora também consigam interagir com o chat, ampliando o alcance da ferramenta de combate à polarização.
 
-Naturalidade na interação: falar é mais natural do que digitar para muitos usuários, o que pode tornar a experiência de "conversar sobre política" mais parecida com um diálogo real, reduzindo a barreira de iniciar a conversa.
+**Acessibilidade:** permite que pessoas com dificuldade de digitação, idosos ou usuários com deficiência visual/motora também consigam interagir com o chat, ampliando o alcance da ferramenta de combate à polarização.
 
-Editor de Código
+**Naturalidade na interação:** falar é mais natural do que digitar para muitos usuários, o que pode tornar a experiência de "conversar sobre política" mais parecida com um diálogo real, reduzindo a barreira de iniciar a conversa.
+
+**Editor de Código**
 Visual Studio Code (VS Code) — utilizado para escrever e organizar todo o código do projeto (HTML, CSS e JavaScript). Escolhido pela leveza, extensões úteis (como Live Server para visualização em tempo real) e por ser amplamente adotado no desenvolvimento web, facilitando o trabalho colaborativo entre os membros do grupo.
 
-Ferramentas de Comunicação
+**Ferramentas de Comunicação**
 Discord — usado para comunicação entre os integrantes do grupo, alinhamento de tarefas, dúvidas rápidas e organização das sprints. Escolhido por permitir conversas em tempo real, criação de canais separados por assunto e fácil compartilhamento de arquivos/links durante o desenvolvimento.
 
-Ferramentas de Diagramação/Prototipação
+**Ferramentas de Diagramação/Prototipação**
 Figma — utilizado na Sprint 1 para a criação do wireframe da interface do chat. Escolhido por ser uma ferramenta colaborativa online, que permite que vários membros visualizem e comentem o protótipo antes da implementação, evitando retrabalho no código.
 
-Plataformas de Hospedagem e Controle de Versão
+**Plataformas de Hospedagem e Controle de Versão**
 GitHub — utilizado para versionamento do código e hospedagem do repositório do projeto, permitindo o trabalho colaborativo entre os membros do grupo, controle de branches e histórico de alterações.
 
-APIs e Recursos Externos
+**APIs e Recursos Externos**
 API do Gemini (Google) — integrada na Sprint 1 para implementar o chat com inteligência artificial, responsável por gerar as respostas automáticas relacionadas ao tema de despolarização política. Escolhida por oferecer um modelo de linguagem gratuito/acessível e de fácil integração via requisições HTTP.
 Web Speech API (API de reconhecimento de voz do navegador) — adicionada na Sprint 2 para permitir que o usuário interaja com o chat por voz. Escolhida por ser nativa dos navegadores modernos, dispensando bibliotecas externas e mantendo o projeto simples (sem dependências adicionais).
