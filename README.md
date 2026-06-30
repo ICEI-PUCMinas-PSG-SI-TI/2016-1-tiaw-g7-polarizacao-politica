@@ -59,13 +59,15 @@ Aprenda Markdown e use-o para documentar o projeto
 Ferramentas
 
 Guilherme Matheus Araujo - Chat IA e Recohecimento de Voz
-Justificativa 
-SPRINT 1
+
+**Justificativa** 
+
+**SPRINT 1**
 Conexão direta com o tema: um chat de IA permite simular um "mediador" neutro, capaz de apresentar diferentes pontos de vista sobre temas polarizados sem tomar partido, ajudando o usuário a refletir em vez de reforçar uma bolha de opinião.
 
 Engajamento do usuário: uma interface conversacional é mais convidativa e interativa do que um site estático com textos informativos, aumentando o tempo de uso e a chance de o usuário realmente refletir sobre o conteúdo.
 
-SPRINT 2
+**SPRINT 2**
 Acessibilidade: permite que pessoas com dificuldade de digitação, idosos ou usuários com deficiência visual/motora também consigam interagir com o chat, ampliando o alcance da ferramenta de combate à polarização.
 
 Naturalidade na interação: falar é mais natural do que digitar para muitos usuários, o que pode tornar a experiência de "conversar sobre política" mais parecida com um diálogo real, reduzindo a barreira de iniciar a conversa.
