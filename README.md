@@ -87,7 +87,9 @@ Figma — utilizado na Sprint 1 para a criação do wireframe da interface do ch
 GitHub — utilizado para versionamento do código e hospedagem do repositório do projeto, permitindo o trabalho colaborativo entre os membros do grupo, controle de branches e histórico de alterações.
 
 **APIs e Recursos Externos**
+
 API do Gemini (Google) — integrada na Sprint 1 para implementar o chat com inteligência artificial, responsável por gerar as respostas automáticas relacionadas ao tema de despolarização política. Escolhida por oferecer um modelo de linguagem gratuito/acessível e de fácil integração via requisições HTTP.
+
 Web Speech API (API de reconhecimento de voz do navegador) — adicionada na Sprint 2 para permitir que o usuário interaja com o chat por voz. Escolhida por ser nativa dos navegadores modernos, dispensando bibliotecas externas e mantendo o projeto simples (sem dependências adicionais).
 
 
