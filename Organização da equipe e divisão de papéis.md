@@ -19,3 +19,6 @@ Como o grupo é formado por estudantes que acumulam funções, os papéis do Scr
 | **Marcelo Henrique Soares Silva** | Página Inicial / Conscientização | Carrossel de vídeos educativos, links de aprofundamento e comentários | Player de podcast e accordion de conteúdos |
 | **André Henrique Braga Dias** | Verificadores de Fake News | Verificador de Fake News com histórico | Verificador de Imparcialidade com IA (Gemini) e gauge visual |
 | **Rubens de Moura Arquina Oliveira** | Página "Sobre" / Avaliação do site | Página institucional com princípios de neutralidade e banner de ambiente | Sistema de avaliação do site (estrelas + comentários) com servidor próprio |
+
+
+link do video https://youtu.be/TOloPXQdZns
