@@ -58,7 +58,7 @@ Aprenda Markdown e use-o para documentar o projeto
 
 Ferramentas
 
-Guilherme Matheus Araujo - Chat IA e Recohecimento de Voz
+**Guilherme Matheus Araujo - Chat IA e Recohecimento de Voz**
 
 **Justificativa** 
 
@@ -92,36 +92,32 @@ Web Speech API (API de reconhecimento de voz do navegador) — adicionada na Spr
 
 
 
+**Karolina Carvalho Soares Martins - Home-Page com Notícias e Sistema de Comentários**
 
-
-
-
-
-Karolina Carvalho Soares Martins - Home-Page com Notícias e Sistema de Comentários
 Justificativa
 
-SPRINT 1
+**SPRINT 1**
 
 Diversidade de fontes visível logo na entrada: o carrossel de destaques e a grade de notícias permitem mostrar, lado a lado, diferentes manchetes e ângulos sobre o mesmo tema, reforçando visualmente a proposta central do projeto — expor o usuário a múltiplas perspectivas, e não a uma bolha única.
 Leitura sem fricção: o modal com a notícia completa (data, autor, fonte, resumo e conteúdo) evita que o usuário precise sair do site para ler mais, mantendo-o no ambiente controlado do Despolariza em vez de buscar informação em fontes não verificadas.
 
-SPRINT 2
+**SPRINT 2**
 
 Senso de comunidade e debate saudável: o sistema de comentários permite que os usuários troquem pontos de vista sobre a mesma notícia dentro do próprio site, incentivando o diálogo direto em vez do compartilhamento isolado em grupos fechados, como o WhatsApp.
 Curadoria coletiva pela avaliação: o sistema de estrelas (com cálculo de média em tempo real) dá ao leitor uma noção rápida da percepção geral sobre a notícia, funcionando como um filtro social complementar aos verificadores automáticos do site.
 
-Editor de Código
+**Editor de Código**
 Visual Studio Code (VS Code) — utilizado para escrever e organizar o código da Home-Page (HTML, CSS e JavaScript, db.json). Escolhido pela leveza, pela extensão Live Server para visualização em tempo real, e por ser o mesmo editor usado pelo restante do grupo, facilitando o trabalho colaborativo.
 
-Ferramentas de Comunicação
+**Ferramentas de Comunicação**
 Discord e WhatsApp — usados para alinhar com os demais integrantes a estrutura de dados das notícias (db.json) e a integração entre as páginas.
 Ferramentas de Diagramação/Prototipação
 Figma — utilizado para esboçar o carrossel de destaques e a grade de cards de notícias antes da implementação, permitindo visualizar o layout e alinhar com o grupo antes de codar.
 
 
-Plataformas de Hospedagem e Controle de Versão
+**Plataformas de Hospedagem e Controle de Versão**
 GitHub — utilizado para versionamento do código da Home-Page dentro do repositório do projeto, permitindo integração com os módulos desenvolvidos pelos outros integrantes.
 
-APIs e Recursos Externos
+**APIs e Recursos Externos**
 JSON Server — utilizado para simular um backend local (localhost:3000), persistindo notícias, comentários e avaliações sem a necessidade de um banco de dados real. Escolhido por ser leve, rápido de configurar e ideal para prototipação em projetos acadêmicos com prazo curto.
 
