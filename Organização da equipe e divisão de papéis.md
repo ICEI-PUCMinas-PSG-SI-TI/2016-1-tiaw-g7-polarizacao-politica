@@ -6,10 +6,6 @@ O desenvolvimento do projeto **Despolariza** foi conduzido utilizando o framewor
 
 Como o grupo é formado por estudantes que acumulam funções, os papéis do Scrum foram distribuídos de forma compartilhada:
 
-- **Product Owner (PO):** responsável por validar se as funcionalidades entregues em cada sprint estavam alinhadas com o objetivo central do projeto — combater a polarização política por meio de neutralidade informativa, multiperspectivismo e combate à desinformação.
-- **Scrum Master:** responsável por organizar as reuniões da equipe, acompanhar o andamento das tarefas no quadro Kanban e remover impedimentos técnicos (ex: conflitos de branch no GitHub, definição de regras de sprint).
-- **Equipe de Desenvolvimento (Dev Team):** todos os integrantes atuaram como desenvolvedores front-end, cada um responsável por uma funcionalidade específica da aplicação, com autonomia para tomar decisões técnicas sobre sua própria entrega, mas alinhando estrutura de dados (ex: `db.json`) com o restante do grupo.
-
 ### Divisão de tarefas por integrante
 
 | Integrante | Funcionalidade principal | Sprint 1 | Sprint 2 |
