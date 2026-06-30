@@ -27,7 +27,7 @@ Slide 7
 Slide 8
 <img width="955" height="529" alt="Slide 8" src="https://github.com/user-attachments/assets/fca6f5c3-7dd6-47d1-8d27-c808827cc7a9" />
 
-SLide 9 
+Slide 9 
 <img width="954" height="533" alt="Slide 9" src="https://github.com/user-attachments/assets/63dc1902-68c0-42e6-a381-3b22d8d3626f" />
 
 
