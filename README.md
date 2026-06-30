@@ -78,7 +78,7 @@ Ferramentas
 Visual Studio Code (VS Code) — utilizado para escrever e organizar todo o código do projeto (HTML, CSS e JavaScript). Escolhido pela leveza, extensões úteis (como Live Server para visualização em tempo real) e por ser amplamente adotado no desenvolvimento web, facilitando o trabalho colaborativo entre os membros do grupo.
 
 **Ferramentas de Comunicação**
-Discord — usado para comunicação entre os integrantes do grupo, alinhamento de tarefas, dúvidas rápidas e organização das sprints. Escolhido por permitir conversas em tempo real, criação de canais separados por assunto e fácil compartilhamento de arquivos/links durante o desenvolvimento.
+Discord e Whatsapp — usado para comunicação entre os integrantes do grupo, alinhamento de tarefas, dúvidas rápidas e organização das sprints. Escolhido por permitir conversas em tempo real, criação de canais separados por assunto e fácil compartilhamento de arquivos/links durante o desenvolvimento.
 
 **Ferramentas de Diagramação/Prototipação**
 Figma — utilizado na Sprint 1 para a criação do wireframe da interface do chat. Escolhido por ser uma ferramenta colaborativa online, que permite que vários membros visualizem e comentem o protótipo antes da implementação, evitando retrabalho no código.
