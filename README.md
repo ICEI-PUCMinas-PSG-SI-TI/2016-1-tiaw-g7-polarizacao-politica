@@ -91,7 +91,6 @@ API do Gemini (Google) — integrada na Sprint 1 para implementar o chat com int
 Web Speech API (API de reconhecimento de voz do navegador) — adicionada na Sprint 2 para permitir que o usuário interaja com o chat por voz. Escolhida por ser nativa dos navegadores modernos, dispensando bibliotecas externas e mantendo o projeto simples (sem dependências adicionais).
 
 
-
 **Karolina Carvalho Soares Martins - Home-Page com Notícias e Sistema de Comentários**
 
 Justificativa
@@ -120,4 +119,38 @@ GitHub — utilizado para versionamento do código da Home-Page dentro do reposi
 
 **APIs e Recursos Externos**
 JSON Server — utilizado para simular um backend local (localhost:3000), persistindo notícias, comentários e avaliações sem a necessidade de um banco de dados real. Escolhido por ser leve, rápido de configurar e ideal para prototipação em projetos acadêmicos com prazo curto.
+
+
+**Marcelo HSS - Página Inicial e Conscientização sobre Polarização Política**
+
+**Justificativa**
+
+**SPRINT 1**
+
+**Conexão direta com o tema:** a página inicial apresenta de forma didática os motivos pelos quais a polarização política é um problema (paralisia institucional, erosão da realidade compartilhada e esgarçamento do tecido social), reunindo um carrossel de vídeos educativos e links de aprofundamento, o que oferece ao usuário diferentes camadas de profundidade para compreender o tema antes de formar uma opinião.
+
+**Engajamento e participação do usuário:** a seção de comentários, conectada a um backend simulado (JSON Server), permite que o usuário interaja diretamente com o conteúdo, deixando sua opinião e visualizando a de outras pessoas, o que aproxima a experiência de uma rede social informativa e estimula o senso de comunidade em torno do debate.
+
+**SPRINT 2**
+
+**Acessibilidade e consumo flexível de conteúdo:** a adição do player de podcast permite que o usuário ouça o conteúdo sobre polarização enquanto realiza outras atividades, ampliando o acesso à informação para pessoas com dificuldade de leitura, deficiência visual ou que simplesmente preferem o formato em áudio.
+
+**Organização e usabilidade:** a transformação dos links de aprofundamento em um accordion (lista expansível) reduz a poluição visual da página e facilita a navegação, permitindo que o usuário escolha de forma mais clara qual material deseja explorar, sem ser sobrecarregado com várias informações ao mesmo tempo.
+
+**Editor de Código**
+Visual Studio Code (VS Code) — utilizado para escrever e organizar todo o código do projeto (HTML, CSS e JavaScript). Escolhido pela leveza, extensões úteis (como Live Server para visualização em tempo real) e por ser amplamente adotado no desenvolvimento web, facilitando o trabalho colaborativo entre os membros do grupo.
+
+**Ferramentas de Comunicação**
+Discord — usado para comunicação entre os integrantes do grupo, alinhamento de tarefas, dúvidas rápidas e organização das sprints. Escolhido por permitir conversas em tempo real, criação de canais separados por assunto e fácil compartilhamento de arquivos/links durante o desenvolvimento.
+
+**Ferramentas de Diagramação/Prototipação**
+Figma — utilizado para a criação do wireframe da página inicial e da estrutura do carrossel de vídeos. Escolhido por ser uma ferramenta colaborativa online, que permite que vários membros visualizem e comentem o protótipo antes da implementação, evitando retrabalho no código.
+
+**Plataformas de Hospedagem e Controle de Versão**
+GitHub — utilizado para versionamento do código e hospedagem do repositório do projeto, permitindo o trabalho colaborativo entre os membros do grupo, controle de branches e histórico de alterações.
+
+**APIs e Recursos Externos**
+Bootstrap — framework CSS integrado na Sprint 1 para a construção rápida do layout responsivo (navbar, carrossel e accordion), garantindo consistência visual e compatibilidade com diferentes tamanhos de tela sem a necessidade de escrever CSS do zero para componentes complexos.
+JSON Server — utilizado para simular uma API REST (dados.json) responsável por armazenar e servir os vídeos, notícias, comentários e, posteriormente, o podcast. Escolhido por permitir prototipar rapidamente o backend do projeto sem a necessidade de configurar um servidor real.
+API de Embed do YouTube (iframe) — integrada na Sprint 1 para exibir os vídeos educativos sobre polarização diretamente na página, incluindo a funcionalidade de miniplayer. Escolhida por ser nativa e gratuita, dispensando bibliotecas adicionais.
 
