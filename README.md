@@ -112,12 +112,16 @@ Curadoria coletiva pela avaliação: o sistema de estrelas (com cálculo de méd
 
 Editor de Código
 Visual Studio Code (VS Code) — utilizado para escrever e organizar o código da Home-Page (HTML, CSS e JavaScript, db.json). Escolhido pela leveza, pela extensão Live Server para visualização em tempo real, e por ser o mesmo editor usado pelo restante do grupo, facilitando o trabalho colaborativo.
+
 Ferramentas de Comunicação
 Discord e WhatsApp — usados para alinhar com os demais integrantes a estrutura de dados das notícias (db.json) e a integração entre as páginas.
 Ferramentas de Diagramação/Prototipação
 Figma — utilizado para esboçar o carrossel de destaques e a grade de cards de notícias antes da implementação, permitindo visualizar o layout e alinhar com o grupo antes de codar.
+
+
 Plataformas de Hospedagem e Controle de Versão
 GitHub — utilizado para versionamento do código da Home-Page dentro do repositório do projeto, permitindo integração com os módulos desenvolvidos pelos outros integrantes.
+
 APIs e Recursos Externos
 JSON Server — utilizado para simular um backend local (localhost:3000), persistindo notícias, comentários e avaliações sem a necessidade de um banco de dados real. Escolhido por ser leve, rápido de configurar e ideal para prototipação em projetos acadêmicos com prazo curto.
 
