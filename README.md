@@ -3,7 +3,7 @@
 
 Trabalho Interdisciplinar - Aplicacões Web
 
-`Sistema de Informacao e Analise e Desenvolvimento de Sistema`
+`Sistema de Informacao e Analise e Desenvolvimento de Sistemas`
 
 `1º SEMESTRE`
 
