@@ -96,12 +96,12 @@ function fecharModal() {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    fetch("http://https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/slides")
+    fetch("https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/slides")
         .then(function (res) { return res.json(); })
         .then(function (slides) { renderizarSlides(slides); })
         .catch(function () { console.error("Erro ao carregar slides. JSON Server está rodando?"); });
 
-    fetch("http://https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/noticia")
+    fetch("https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/noticia")
         .then(function (res) { return res.json(); })
         .then(function (noticias) {
             noticiasCache = noticias;
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-const API = "http://https://two016-1-tiaw-g7-polarizacao-politica.onrender.com";
+const API = "https://two016-1-tiaw-g7-polarizacao-politica.onrender.com";
 let noticiaAtualIndex = -1;
 let noticiaAtualId    = null;
 let avaliacaoSelecionada = 0;

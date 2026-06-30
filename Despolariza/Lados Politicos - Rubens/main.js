@@ -1,7 +1,7 @@
 /* ══════════════════════════════════════════════════════
    SISTEMA DE VERIFICAÇÃO DE ESTATÍSTICAS POLÍTICAS
 ══════════════════════════════════════════════════════ */
-const API_PARTIDOS = "http://https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/partidos";
+const API_PARTIDOS = "https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/partidos";
 let PARTIDOS = [];
 
 async function carregarPartidos() {

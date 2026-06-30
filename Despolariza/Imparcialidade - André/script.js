@@ -65,7 +65,7 @@ function animarMedidor(porcentagemFinal) {
 }
 
 async function excluirItem(id) {
-    await fetch(`http://https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/verificador_de_imparcialidade/${id}`, {
+    await fetch(`https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/verificador_de_imparcialidade/${id}`, {
         method: 'DELETE'
     });
 
@@ -75,7 +75,7 @@ async function excluirItem(id) {
 let dadosHistorico = [];
 
 async function carregarHistorico() {
-    const response = await fetch('http://https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/verificador_de_imparcialidade');
+    const response = await fetch('https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/verificador_de_imparcialidade');
     dadosHistorico = await response.json();
     renderizarHistorico();
 }
@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
         else if (porcentagem <= 60) veredictoTexto = `${porcentagem}% - Moderadamente tendencioso`;
         else veredictoTexto = `${porcentagem}% - Muito tendencioso`;
 
-        await fetch('http://https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/verificador_de_imparcialidade', {
+        await fetch('https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/verificador_de_imparcialidade', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
