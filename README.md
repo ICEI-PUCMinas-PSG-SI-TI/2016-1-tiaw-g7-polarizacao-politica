@@ -129,15 +129,15 @@ JSON Server — utilizado para simular um backend local (localhost:3000), persis
 
 **SPRINT 1**
 
-**Conexão direta com o tema:** a página inicial apresenta de forma didática os motivos pelos quais a polarização política é um problema (paralisia institucional, erosão da realidade compartilhada e esgarçamento do tecido social), reunindo um carrossel de vídeos educativos e links de aprofundamento, o que oferece ao usuário diferentes camadas de profundidade para compreender o tema antes de formar uma opinião.
+**Conexão direta com o tema:** A página inicial apresenta de forma didática os motivos pelos quais a polarização política é um problema (paralisia institucional, erosão da realidade compartilhada e esgarçamento do tecido social), reunindo um carrossel de vídeos educativos e links de aprofundamento, o que oferece ao usuário diferentes camadas de profundidade para compreender o tema antes de formar uma opinião.
 
-**Engajamento e participação do usuário:** a seção de comentários, conectada a um backend simulado (JSON Server), permite que o usuário interaja diretamente com o conteúdo, deixando sua opinião e visualizando a de outras pessoas, o que aproxima a experiência de uma rede social informativa e estimula o senso de comunidade em torno do debate.
+**Engajamento e participação do usuário:** A seção de comentários, conectada a um backend simulado (JSON Server), permite que o usuário interaja diretamente com o conteúdo, deixando sua opinião e visualizando a de outras pessoas, o que aproxima a experiência de uma rede social informativa e estimula o senso de comunidade em torno do debate.
 
 **SPRINT 2**
 
-**Acessibilidade e consumo flexível de conteúdo:** a adição do player de podcast permite que o usuário ouça o conteúdo sobre polarização enquanto realiza outras atividades, ampliando o acesso à informação para pessoas com dificuldade de leitura, deficiência visual ou que simplesmente preferem o formato em áudio.
+**Acessibilidade e consumo flexível de conteúdo:** A adição do player de podcast permite que o usuário ouça o conteúdo sobre polarização enquanto realiza outras atividades, ampliando o acesso à informação para pessoas com dificuldade de leitura, deficiência visual ou que simplesmente preferem o formato em áudio.
 
-**Organização e usabilidade:** a transformação dos links de aprofundamento em um accordion (lista expansível) reduz a poluição visual da página e facilita a navegação, permitindo que o usuário escolha de forma mais clara qual material deseja explorar, sem ser sobrecarregado com várias informações ao mesmo tempo.
+**Organização e usabilidade:** A transformação dos links de aprofundamento em um accordion (lista expansível) reduz a poluição visual da página e facilita a navegação, permitindo que o usuário escolha de forma mais clara qual material deseja explorar, sem ser sobrecarregado com várias informações ao mesmo tempo.
 
 **Editor de Código**
 Visual Studio Code (VS Code) — utilizado para escrever e organizar todo o código do projeto (HTML, CSS e JavaScript). Escolhido pela leveza, extensões úteis (como Live Server para visualização em tempo real) e por ser amplamente adotado no desenvolvimento web, facilitando o trabalho colaborativo entre os membros do grupo.
