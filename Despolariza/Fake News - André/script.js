@@ -1,12 +1,12 @@
 async function excluirItem(id) {
-    await fetch(`http://localhost:3000/verificador_de_fake_news/${id}`, {
+    await fetch(`http://https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/verificador_de_fake_news/${id}`, {
         method: 'DELETE'
     });
     carregarHistorico();
 }
 
 async function carregarHistorico() {
-    const response = await fetch('http://localhost:3000/verificador_de_fake_news');
+    const response = await fetch('http://https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/verificador_de_fake_news');
     const dados = await response.json();
 
     const lista = document.getElementById('lista-historico');
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () =>
     }
 
         if (veredicto === 'FALSO' || veredicto === 'VERDADEIRO') {
-            await fetch('http://localhost:3000/verificador_de_fake_news', {
+            await fetch('http://https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/verificador_de_fake_news', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

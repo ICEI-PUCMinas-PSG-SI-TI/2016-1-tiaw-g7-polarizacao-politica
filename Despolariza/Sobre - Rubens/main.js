@@ -1,7 +1,7 @@
 /* ══════════════════════════════════════════════════════
    CONFIG
 ══════════════════════════════════════════════════════ */
-const API    = "http://localhost:3000/avaliacoesSobre";
+const API    = "http://https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/avaliacoesSobre";
 const LABELS = ["", "Péssimo 😞", "Ruim 😕", "Regular 😐", "Bom 😊", "Excelente 🤩"];
 
 /* ── Referências DOM ────────────────────────────────── */

@@ -1,7 +1,7 @@
 let videos = [];
 let dadosVideos = [];
 
-fetch("http://localhost:3000/videos")
+fetch("http://https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/videos")
   .then(function(response) { 
     if (!response.ok) {
       alert("Erro no servidor: O caminho /videos não foi encontrado dentro do dados.json.");
@@ -85,7 +85,7 @@ function abrirMiniplayer() {
   miniplayer.style.display = "flex";
 }
 function carregarComentarios() {
-  fetch("http://localhost:3000/comentariosAprofundamento")
+  fetch("http://https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/comentariosAprofundamento")
     .then(function(response) { return response.json(); })
     .then(function(data) {
       const lista = document.getElementById("lista-comentarios");
@@ -126,7 +126,7 @@ function salvarComentario() {
 
   const data = new Date().toLocaleDateString("pt-BR");
 
-  fetch("http://localhost:3000/comentariosAprofundamento", {
+  fetch("http://https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/comentariosAprofundamento", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ nome: nome, texto: texto, data: data })
@@ -139,7 +139,7 @@ function salvarComentario() {
 }
 
 function deletarComentario(id) {
-  fetch("http://localhost:3000/comentariosAprofundamento/" + id, {
+  fetch("http://https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/comentariosAprofundamento/" + id, {
     method: "DELETE"
   })
   .then(function() {
@@ -149,7 +149,7 @@ function deletarComentario(id) {
 
 carregarComentarios();
 // PODCAST
-fetch("http://localhost:3000/podcast")
+fetch("http://https://two016-1-tiaw-g7-polarizacao-politica.onrender.com/podcast")
   .then(function(response) { return response.json(); })
   .then(function(data) {
     var podcast = data[0];
